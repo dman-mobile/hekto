@@ -11,3 +11,15 @@ export const FlexCenter = styled('div')({
   justifyContent: 'center',
   alignItems: 'center'
 })
+
+export const FlexColumn = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'start',
+  alignItems: 'start',
+  gap: 16
+})
+
+export const FlexContainer = styled('div')({
+  display: 'flex'
+})

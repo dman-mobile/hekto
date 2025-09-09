@@ -1,0 +1,23 @@
+import { styled } from "@mui/system";
+
+export const Subtitle = styled('p')({
+  fontFamily: 'var(--font-family-secondary)',
+  color: 'var(--color-primary)',
+  fontWeight: 700,
+  fontSize: 16,
+  letterSpacing: 1
+})
+
+export const Title = styled('h1')({
+  fontFamily: 'var(--font-family-primary)',
+  maxWidth: 570
+})
+
+export const Body = styled('p')({
+  fontFamily: 'var(--font-family-secondary)',
+  color: 'var(--color-gray-3)',
+  fontWeight: 400,
+  fontSize: 16,
+  letterSpacing: 0,
+  maxWidth: '60ch'
+})
