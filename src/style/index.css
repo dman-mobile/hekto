@@ -1,0 +1,63 @@
+:root {
+  /* Fonts */
+  --font-family-primary: 'Josefin Sans';
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Primary Palette */
+  --color-primary: #FB2E86;
+
+  /* Secondary Palette */
+  --color-secondary: #F9BA00;
+  --color-secondary-light: #FFF3CE;
+  
+  /* Tertiary Palette */
+  --color-tertiary: #7E33E0;
+  --color-tertiary-light: #F2F0FF;
+  
+  /* Info */
+  --color-info: #603EFF;
+  --color-info: #DDD6FF;
+  
+  /* Black & White */
+  --color-white: #FFFFFF;
+  --color-black: #101750;
+  
+  --color-gray-1: #F8F8FD;
+  --color-gray-2: #E5E0FC;
+  --color-gray-3: #8A8FB9;
+
+  /* Success */
+  --color-success: #0CC562;
+  
+  /* Text */
+  --color-text-primary: #101750;
+  --color-text-secondary: #F1F1F1;
+
+  /* Danger */
+  --color-danger-light: #FEB9C4;
+
+  /* Background */
+  --color-background-default: var(--color-white);
+
+  /* Spacing */
+  --spacing-unit: 32px;
+
+  /* Border */
+  --border-radius: 4px;
+  --divider-color: var(--color-gray-2);
+}
+
+/* Basic CSS Reset */
+body {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  background-color: var(--color-background-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
