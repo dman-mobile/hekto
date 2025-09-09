@@ -1,0 +1,1 @@
+export const BANNER_CYCLE_TIME = 10000;

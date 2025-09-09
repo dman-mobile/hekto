@@ -1,12 +1,14 @@
 :root {
   /* Fonts */
   --font-family-primary: 'Josefin Sans';
+  --font-family-secondary: 'Lato';
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
   /* Primary Palette */
   --color-primary: #FB2E86;
+  --color-primary-dark: #F0056A;
 
   /* Secondary Palette */
   --color-secondary: #F9BA00;
@@ -51,11 +53,33 @@
   --divider-color: var(--color-gray-2);
 }
 
+h1 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 1.5%;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 1.5%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 /* Basic CSS Reset */
 body {
   margin: 0;
   font-family: var(--font-family-primary);
   background-color: var(--color-background-default);
+  color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -64,6 +88,8 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -110,4 +136,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+button {
+  font-family: inherit;
 }

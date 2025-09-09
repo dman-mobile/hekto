@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "New Trendy Collection Headphones",
+    "subtitle": "Best Headphones For Your Life",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+    "image": "/hero-headphones.png",
+    "discount": "50% Off"
+  },
+  {
+    "id": 2,
+    "title": "Experience Crystal Clear Sound",
+    "subtitle": "High-Fidelity Speakers",
+    "body": "Discover our new range of speakers that deliver unparalleled audio quality for a truly immersive experience.",
+    "image": "/hero-headphones.png",
+    "discount": "30% Off"
+  },
+  {
+    "id": 3,
+    "title": "Smart Watches for a Smart Life",
+    "subtitle": "Stay Connected On The Go",
+    "body": "Track your fitness, manage notifications, and stay ahead with our latest collection of stylish smart watches.",
+    "image": "/hero-headphones.png",
+    "discount": "New!"
+  }
+]
