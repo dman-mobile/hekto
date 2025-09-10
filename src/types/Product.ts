@@ -5,7 +5,8 @@ export interface ProductData {
   title: string,
   code: string,
   imageUrl: string,
-  price: number
+  price: number,
+  sale: boolean
 }
 
 export type ProductCategory = 'new' | 'best' | 'featured' | 'offer';

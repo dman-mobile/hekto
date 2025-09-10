@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons";
 import { FlexBetween, FlexCenter } from "../styled-components/Flex.styles";
-import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, Tab, TabsBar } from "./Latest.styles";
+import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, SaleTag, Tab, TabsBar } from "./Latest.styles";
 import { ButtonRound } from "./ui/Button.styles";
 import { ProductData, ProductCategory } from "@/types/Product";
 
@@ -69,6 +69,8 @@ export default function Latest() {
                 </p>
               </FlexCenter>
             </FlexBetween>
+            {product.sale ? 
+            <SaleTag /> : null}
           </Card>
         ))}
       </Grid>

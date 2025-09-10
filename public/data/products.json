@@ -161,7 +161,8 @@
       "title": "perfume",
       "code": "Y523201",
       "price": 19,
-      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png"
+      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png",
+      "sale": true
     },
     {
       "id": 17,

@@ -49,7 +49,8 @@ export const Card = styled(FlexColumn)({
     '& button': {
       opacity: 1
     }
-  }
+  },
+  position: "relative"
 })
 
 export const ImageContainer = styled('div')({
@@ -74,4 +75,14 @@ export const CardActions = styled(FlexColumn)({
     transition: 'all .3s ease-in-out',
     opacity: 0
   }
+})
+
+export const SaleTag = styled('div')({
+  width: 86,
+  height: 56,
+  backgroundImage: 'url(/sale-tag.png)',
+  backgroundRepeat: 'no-repeat',
+  position: 'absolute',
+  top: 0,
+  left: 0
 })
