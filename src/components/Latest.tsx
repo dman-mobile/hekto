@@ -1,8 +1,24 @@
+import { useEffect, useState } from "react";
+import { CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons"
 import { FlexBetween, FlexCenter } from "../styled-components/Flex.styles"
-import { Card, CardActions, Grid, Image, LatestSection, Tab, TabsBar } from "./Latest.styles"
+import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, Tab, TabsBar } from "./Latest.styles"
 import { ButtonRound } from "./ui/Button.styles"
 
 export default function Latest() {
+    const [products, setProducts] = useState<ProductsData[]>([]);
+  
+    useEffect(() => {
+      const getBanners = async () => {
+        try {
+          const response = await fetch('/data/banners.json');
+          const data = await response.json();
+          setProducts(data);
+        } catch (error) {
+          console.error("Failed to fetch banners:", error);
+        }
+      };
+      getBanners();
+    }, []);
   return (
     <LatestSection>
       <h2>Latest Products</h2>
@@ -13,8 +29,21 @@ export default function Latest() {
         <Tab>Special Offer</Tab>
       </TabsBar>
       <Grid>
-        <Card>
-          <Image src="/products/3f220e65a430d1cc5860cfb6c63ddda895c334df.png" alt="" />
+        {products && products.map((product, index) =>         <Card>
+          <ImageContainer>
+            <Image src="public/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png" alt="" />
+            <CardActions>
+              <ButtonRound>
+                <CartIcon />
+              </ButtonRound>
+              <ButtonRound>
+                <HeartIcon />
+              </ButtonRound>
+              <ButtonRound>
+                <ZoomIcon />
+              </ButtonRound>
+            </CardActions>
+          </ImageContainer>
           <FlexBetween>
             <p>Game console</p>
             <FlexCenter sx={{ gap: 1.6 }}>
@@ -22,32 +51,7 @@ export default function Latest() {
               <p style={{ color: 'var(--color-primary)' }}>$89</p>
             </FlexCenter>
           </FlexBetween>
-        </Card>
-        <Card>
-          <Image src="public/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png" alt="" />
-          <FlexBetween>
-            <p>Game console</p>
-            <FlexCenter sx={{ gap: 1.6 }}>
-              <p>$76</p>
-              <p style={{ color: 'var(--color-primary)' }}>$89</p>
-            </FlexCenter>
-          </FlexBetween>
-          <CardActions>
-            <ButtonRound>
-              
-            </ButtonRound>
-          </CardActions>
-        </Card>
-        <Card>
-          <Image src="public/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png" alt="" />
-          <FlexBetween>
-            <p>Game console</p>
-            <FlexCenter sx={{ gap: 1.6 }}>
-              <p>$76</p>
-              <p style={{ color: 'var(--color-primary)' }}>$89</p>
-            </FlexCenter>
-          </FlexBetween>
-        </Card>
+        </Card>)}
       </Grid>
     </LatestSection >
   )

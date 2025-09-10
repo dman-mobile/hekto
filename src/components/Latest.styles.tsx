@@ -33,17 +33,27 @@ export const Grid = styled('div')({
   gridTemplateColumns: '1fr 1fr 1fr',
   gridTemplateRows: '1fr 1fr',
   gap: 'var(--spacing-unit)',
-  paddingTop: 64
+  paddingTop: 64,
 })
 
 export const Card = styled(FlexColumn)({
   maxWidth: 416,
   width: '100%',
   maxHeight: 304,
-  overflow: 'hidden'
+  overflow: 'hidden',
+  ':hover': {
+    '& button': {
+      opacity: 1
+    }
+  }
+})
+
+export const ImageContainer = styled('div')({
+  position: 'relative',
 })
 
 export const Image = styled('img')({
+  position: 'relative',
   maxWidth: '100%',
   height: 272,
   width: 416,
@@ -53,5 +63,11 @@ export const Image = styled('img')({
 
 export const CardActions = styled(FlexColumn)({
   gap: 8,
-  
+  position: 'absolute',
+  bottom: 8,
+  left: 8,
+  '& > button': {
+    transition: 'all .3s ease-in-out',
+    opacity: 0
+  }
 })
