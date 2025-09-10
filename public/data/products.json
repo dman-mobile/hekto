@@ -236,42 +236,48 @@
       "title": "game console",
       "code": "Y523201",
       "price": 76,
-      "imageUrl": "/products/587da503356759e895c70a62fd0cd82d62e643b9.jpg"
+      "imageUrl": "/products/587da503356759e895c70a62fd0cd82d62e643b9.jpg",
+      "sale": true
     },
     {
       "id": 19,
       "title": "shoes",
       "code": "Y523201",
       "price": 57,
-      "imageUrl": "public/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
+      "imageUrl": "public/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png",
+      "sale": true
     },
     {
       "id": 18,
       "title": "perfume",
       "code": "Y523201",
       "price": 19,
-      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png"
+      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png",
+      "sale": true
     },
     {
       "id": 17,
       "title": "present box",
       "code": "Y523201",
       "price": 12,
-      "imageUrl": "/products/d56415a4b7736f1301d604f866095320c9ba9b48.png"
+      "imageUrl": "/products/d56415a4b7736f1301d604f866095320c9ba9b48.png",
+      "sale": true
     },
     {
       "id": 16,
       "title": "watches",
       "code": "A198451",
       "price": 67,
-      "imageUrl": "/products/3f220e65a430d1cc5860cfb6c63ddda895c334df.png"
+      "imageUrl": "/products/3f220e65a430d1cc5860cfb6c63ddda895c334df.png",
+      "sale": true
     },
     {
       "id": 2,
       "title": "ring",
       "code": "B234562",
       "price": 56,
-      "imageUrl": "/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png"
+      "imageUrl": "/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png",
+      "sale": true
     }
   ]
 }
