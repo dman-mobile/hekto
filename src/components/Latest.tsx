@@ -1,58 +1,77 @@
 import { useEffect, useState } from "react";
-import { CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons"
-import { FlexBetween, FlexCenter } from "../styled-components/Flex.styles"
-import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, Tab, TabsBar } from "./Latest.styles"
-import { ButtonRound } from "./ui/Button.styles"
+import { CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons";
+import { FlexBetween, FlexCenter } from "../styled-components/Flex.styles";
+import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, Tab, TabsBar } from "./Latest.styles";
+import { ButtonRound } from "./ui/Button.styles";
+import { ProductData, ProductCategory } from "@/types/Product";
+
+const tabs: { label: string; category: ProductCategory }[] = [
+  { label: 'New Arrivals', category: 'new' },
+  { label: 'Best Seller', category: 'best' },
+  { label: 'Featured', category: 'featured' },
+  { label: 'Special Offer', category: 'offer' },
+];
 
 export default function Latest() {
-    const [products, setProducts] = useState<ProductsData[]>([]);
-  
-    useEffect(() => {
-      const getBanners = async () => {
-        try {
-          const response = await fetch('/data/banners.json');
-          const data = await response.json();
-          setProducts(data);
-        } catch (error) {
-          console.error("Failed to fetch banners:", error);
-        }
-      };
-      getBanners();
-    }, []);
+  const [products, setProducts] = useState<ProductData[]>([]);
+  const [activeTab, setActiveTab] = useState<ProductCategory>('new');
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await fetch('/data/products.json');
+        const data = await response.json();
+        setProducts(data[activeTab]);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
+    };
+    getProducts();
+  }, [activeTab]);
+
   return (
     <LatestSection>
       <h2>Latest Products</h2>
       <TabsBar>
-        <Tab>New Arrivals</Tab>
-        <Tab>Best Seller</Tab>
-        <Tab>Featured</Tab>
-        <Tab>Special Offer</Tab>
+        {tabs.map((tab) => (
+          <Tab
+            key={tab.category}
+            isActive={activeTab === tab.category}
+            onClick={() => setActiveTab(tab.category)}
+          >
+            {tab.label}
+          </Tab>
+        ))}
       </TabsBar>
       <Grid>
-        {products && products.map((product, index) =>         <Card>
-          <ImageContainer>
-            <Image src="public/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png" alt="" />
-            <CardActions>
-              <ButtonRound>
-                <CartIcon />
-              </ButtonRound>
-              <ButtonRound>
-                <HeartIcon />
-              </ButtonRound>
-              <ButtonRound>
-                <ZoomIcon />
-              </ButtonRound>
-            </CardActions>
-          </ImageContainer>
-          <FlexBetween>
-            <p>Game console</p>
-            <FlexCenter sx={{ gap: 1.6 }}>
-              <p>$76</p>
-              <p style={{ color: 'var(--color-primary)' }}>$89</p>
-            </FlexCenter>
-          </FlexBetween>
-        </Card>)}
+        {products && products.slice(0,6).map((product) => (
+          <Card key={product.id}>
+            <ImageContainer>
+              <Image src={product.imageUrl} alt={product.title} />
+              <CardActions>
+                <ButtonRound>
+                  <CartIcon />
+                </ButtonRound>
+                <ButtonRound>
+                  <HeartIcon />
+                </ButtonRound>
+                <ButtonRound>
+                  <ZoomIcon />
+                </ButtonRound>
+              </CardActions>
+            </ImageContainer>
+            <FlexBetween>
+              <p style={{ textTransform: 'capitalize' }}>{product.title}</p>
+              <FlexCenter sx={{ gap: 1.6 }}>
+                <p>${product.price.toFixed(2)}</p>
+                <p style={{ color: 'var(--color-primary)', textDecoration: 'line-through' }}>
+                  ${(product.price + 15).toFixed(2)}
+                </p>
+              </FlexCenter>
+            </FlexBetween>
+          </Card>
+        ))}
       </Grid>
-    </LatestSection >
-  )
+    </LatestSection>
+  );
 }

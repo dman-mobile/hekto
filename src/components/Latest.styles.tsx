@@ -17,16 +17,19 @@ export const TabsBar = styled('nav')({
   paddingTop: 16
 })
 
-export const Tab = styled('button')({
+
+export const Tab = styled('button')<{ isActive?: boolean }>(({ isActive }) => ({
   border: 'none',
   background: 'transparent',
   fontFamily: 'var(--font-family-secondary)',
   fontSize: '18px',
   lineHeight: '24px',
   letterSpacing: '0px',
-  color: 'var(--color-black)'
+  cursor: 'pointer',
+  color: isActive ? 'var(--color-primary)' : 'var(--color-black)',
+  transition: 'color 0.3s ease, border-bottom 0.3s ease',
+}))
 
-})
 
 export const Grid = styled('div')({
   display: 'grid',
@@ -37,6 +40,7 @@ export const Grid = styled('div')({
 })
 
 export const Card = styled(FlexColumn)({
+  gap: 12,
   maxWidth: 416,
   width: '100%',
   maxHeight: 304,
