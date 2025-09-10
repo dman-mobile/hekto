@@ -1,5 +1,6 @@
 import { FlexBetween, FlexCenter } from "../styled-components/Flex.styles"
 import { Card, CardActions, Grid, Image, LatestSection, Tab, TabsBar } from "./Latest.styles"
+import { ButtonRound } from "./ui/Button.styles"
 
 export default function Latest() {
   return (
@@ -32,7 +33,9 @@ export default function Latest() {
             </FlexCenter>
           </FlexBetween>
           <CardActions>
-            
+            <ButtonRound>
+              
+            </ButtonRound>
           </CardActions>
         </Card>
         <Card>

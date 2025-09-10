@@ -29,25 +29,35 @@ export const ButtonSearch = styled('button')({
 })
 
 export const ButtonSmall = styled('button')({
+  maxWidth: 101,
   cursor: 'pointer',
   padding: '11px 16px',
   transition: 'background 0.2s',
   background: 'var(--color-success)',
+  color: 'var(--color-white)',
+  borderRadius: 'var(--border-radius)',
+  border: 'none',
   ":hover": {
     background: 'var(--color-success-dark)'
   },
   fontSize: 12,
   fontWeight: 600,
-  lineHeight: 14
 })
 
 export const ButtonRound = styled('button')({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   cursor: 'pointer',
-  padding: '11px 16px',
   color: 'var(--color-tertiary)',
   transition: 'background 0.2s',
-  background: 'var(--color-white)',
+  background: 'transparent',
   ":hover": {
     background: 'var(--color-gray-2)'
   },
+  border: 'none',
+  aspectRatio: '1/1',
+  borderRadius: '100%',
+  width: 32,
+  height: 32
 })
