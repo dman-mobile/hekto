@@ -43,7 +43,7 @@ export const Banner = styled(FlexContainer)({
   transition: 'margin-right 0.3s ease-out',
   '@media (max-width: 1900px)': {
     marginRight: 0,
-    gap: 32,
+    gap: 'var(--spacing-unit)',
     justifyContent: 'center',
   },
 });

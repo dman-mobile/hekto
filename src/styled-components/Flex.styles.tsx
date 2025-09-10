@@ -9,7 +9,15 @@ export const FlexBetween = styled('div')({
 export const FlexCenter = styled('div')({
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  gap: 'var(--spacing-unit)'
+})
+
+export const FlexStart = styled('div')({
+  display: 'flex',
+  justifyContent: 'start',
+  alignItems: 'center',
+  gap: 'var(--spacing-unit)'
 })
 
 export const FlexColumn = styled('div')({
@@ -17,7 +25,7 @@ export const FlexColumn = styled('div')({
   flexDirection: 'column',
   justifyContent: 'start',
   alignItems: 'start',
-  gap: 16
+  gap: 16,
 })
 
 export const FlexContainer = styled('div')({

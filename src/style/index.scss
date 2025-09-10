@@ -20,7 +20,7 @@
 
   /* Info */
   --color-info: #603EFF;
-  --color-info: #DDD6FF;
+  --color-info-light: #DDD6FF;
 
   /* Black & White */
   --color-white: #FFFFFF;
@@ -70,7 +70,6 @@ h3 {
   font-size: 36px;
   line-height: 44px;
   letter-spacing: 1.5%;
-  text-align: center;
   text-transform: capitalize;
 }
 
@@ -140,4 +139,8 @@ input[type="number"] {
 
 button {
   font-family: inherit;
+}
+
+img {
+  max-width: 100%;
 }
