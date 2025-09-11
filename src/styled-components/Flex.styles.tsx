@@ -3,7 +3,8 @@ import { styled } from "@mui/system";
 export const FlexBetween = styled('div')({
   display: 'flex',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+  width: '100%'
 })
 
 export const FlexCenter = styled('div')({
