@@ -21,7 +21,7 @@ export const BlogCard = styled(FlexColumn)({
   ':hover': {
     boxShadow: 'var(--shadow-large)',
     transform: 'translateY(-24px)',
-    [`& ${BlogTitle}`]: {
+    '& .blog-title': {
       color: 'var(--color-primary)'
     },
   },
@@ -32,6 +32,7 @@ export const BlogCard = styled(FlexColumn)({
   }
 })
 
+
 export const BlogCardBody = styled(FlexColumn)({
   gap: 0,
   padding: 18,
@@ -39,7 +40,6 @@ export const BlogCardBody = styled(FlexColumn)({
 })
 
 export const BlogInfo = styled(FlexStart)({
-  gap: 'calc(var(--spacing-unit) * 2)',
   '& div': {
     display: 'flex',
     justifyContent: 'start',
