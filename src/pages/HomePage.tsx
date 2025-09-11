@@ -9,8 +9,8 @@ export default function HomePage() {
     <>
       <Hero />
       <Unique />
-      <Discount />
       <Latest />
+      <Discount />
       <Newsletter />
     </>
   )
