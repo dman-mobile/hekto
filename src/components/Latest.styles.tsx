@@ -1,4 +1,5 @@
-import { FlexColumn } from "../styled-components/Flex.styles";
+import { TabProps } from "../types/Tabs";
+import { FlexCenter, FlexColumn } from "../styled-components/Flex.styles";
 import { Section } from "../styled-components/Section.styles";
 import { styled } from "@mui/system";
 
@@ -6,7 +7,8 @@ export const LatestSection = styled(Section)({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+
 })
 
 export const TabsBar = styled('nav')({
@@ -18,7 +20,7 @@ export const TabsBar = styled('nav')({
 })
 
 
-export const Tab = styled('button')<{ isActive?: boolean }>(({ isActive }) => ({
+export const Tab = styled('button')<TabProps>(({ isActive }) => ({
   border: 'none',
   background: 'transparent',
   fontFamily: 'var(--font-family-secondary)',
@@ -85,4 +87,17 @@ export const SaleTag = styled('div')({
   position: 'absolute',
   top: 0,
   left: 0
+})
+
+export const PriceDiscount = styled('p')({
+  color: 'var(--color-primary)',
+  textDecoration: 'line-through'
+})
+
+export const Title = styled('p')({
+  textTransform: 'capitalize'
+})
+
+export const PriceContainer = styled(FlexCenter)({
+  gap: 16
 })

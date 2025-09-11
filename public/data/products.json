@@ -154,7 +154,7 @@
       "title": "shoes",
       "code": "Y523201",
       "price": 57,
-      "imageUrl": "public/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
+      "imageUrl": "/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
     },
     {
       "id": 18,
@@ -199,7 +199,7 @@
       "title": "shoes",
       "code": "Y523201",
       "price": 57,
-      "imageUrl": "public/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
+      "imageUrl": "/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
     },
     {
       "id": 18,
@@ -244,7 +244,7 @@
       "title": "shoes",
       "code": "Y523201",
       "price": 57,
-      "imageUrl": "public/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png",
+      "imageUrl": "products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png",
       "sale": true
     },
     {

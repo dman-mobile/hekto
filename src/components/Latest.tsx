@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons";
-import { FlexBetween, FlexCenter } from "../styled-components/Flex.styles";
-import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, SaleTag, Tab, TabsBar } from "./Latest.styles";
+import { FlexBetween } from "../styled-components/Flex.styles";
+import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, PriceContainer, PriceDiscount, SaleTag, Tab, TabsBar, Title } from "./Latest.styles";
 import { ButtonRound } from "./ui/Button.styles";
 import { ProductData, ProductCategory } from "@/types/Product";
+import { ITab } from "../types/Tabs";
 
-const tabs: { label: string; category: ProductCategory }[] = [
+const tabs: ITab<ProductCategory>[] = [
   { label: 'New Arrivals', category: 'new' },
   { label: 'Best Seller', category: 'best' },
   { label: 'Featured', category: 'featured' },
   { label: 'Special Offer', category: 'offer' },
-];
+]
 
 export default function Latest() {
   const [products, setProducts] = useState<ProductData[]>([]);
@@ -44,7 +45,7 @@ export default function Latest() {
         ))}
       </TabsBar>
       <Grid>
-        {products && products.slice(0,6).map((product) => (
+        {products && products.slice(0, 6).map((product) => (
           <Card key={product.id}>
             <ImageContainer>
               <Image src={product.imageUrl} alt={product.title} />
@@ -61,16 +62,19 @@ export default function Latest() {
               </CardActions>
             </ImageContainer>
             <FlexBetween>
-              <p style={{ textTransform: 'capitalize' }}>{product.title}</p>
-              <FlexCenter sx={{ gap: 1.6 }}>
-                <p>${product.price.toFixed(2)}</p>
-                <p style={{ color: 'var(--color-primary)', textDecoration: 'line-through' }}>
-                  ${(product.price + 15).toFixed(2)}
-                </p>
-              </FlexCenter>
+              <Title>{product.title}</Title>
+              {!product.sale && <p>${product.price.toFixed(2)}</p>}
+              {product.sale &&
+                <PriceContainer>
+                  <p>${product.price.toFixed(2)}</p>
+                  <PriceDiscount>
+                    ${(product.price + 15).toFixed(2)}
+                  </PriceDiscount>
+                </PriceContainer>
+              }
             </FlexBetween>
-            {product.sale ? 
-            <SaleTag /> : null}
+            {product.sale ?
+              <SaleTag /> : null}
           </Card>
         ))}
       </Grid>
