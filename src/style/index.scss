@@ -48,6 +48,13 @@
   /* Spacing */
   --spacing-unit: 32px;
 
+  /* Shadow */
+  --shadow-color: #10175026;
+  --shadow: 8px 24px 32px -16px var(--shadow-color);
+  --shadow-large: 8px 64px 80px -16px var(--shadow-color);
+
+
+
   /* Border */
   --border-radius: 4px;
   --divider-color: var(--color-gray-2);
