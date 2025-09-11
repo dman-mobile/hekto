@@ -15,6 +15,18 @@ export const ButtonBig = styled('button')({
   cursor: 'pointer'
 })
 
+export const ButtonText = styled('button')({
+  background: 'transparent',
+  ":hover": {
+    color: 'var(--color-primary-dark)'
+  },
+  fontSize: 16,
+  fontWeight: 600,
+  border: 'none',
+  color: 'var(--color-primary)',
+  cursor: 'pointer'
+})
+
 export const ButtonSearch = styled('button')({
   cursor: 'pointer',
   maxHeight: 36,

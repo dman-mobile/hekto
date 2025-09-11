@@ -13,6 +13,14 @@ export const Title = styled('h1')({
   maxWidth: 570
 })
 
+export const SubtitleSmall = styled('p')({
+  fontFamily: 'var(--font-family-primary)',
+  fontWeight: 600,
+  fontSize: 16,
+  lineHeight: '20px',
+  letterSpacing: 0
+})
+
 export const Body = styled('p')({
   fontFamily: 'var(--font-family-secondary)',
   color: 'var(--color-gray-3)',
@@ -21,6 +29,14 @@ export const Body = styled('p')({
   letterSpacing: 0,
   maxWidth: '60ch',
 })
+
+export const LabelSmall = styled('p')({
+  fontFamily: 'var(--font-family-primary)',
+  fontWeight: 400,
+  fontSize: 14,
+  lineHeight: '16px',
+  letterSpacing: 0
+})  
 
 export const BodyLarge = styled(Body)({
   fontSize: 18,
