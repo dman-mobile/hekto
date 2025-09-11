@@ -19,5 +19,10 @@ export const Body = styled('p')({
   fontWeight: 400,
   fontSize: 16,
   letterSpacing: 0,
-  maxWidth: '60ch'
+  maxWidth: '60ch',
+})
+
+export const BodyLarge = styled(Body)({
+  fontSize: 18,
+  lineHeight: '24px'
 })

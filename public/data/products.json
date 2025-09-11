@@ -279,5 +279,62 @@
       "imageUrl": "/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png",
       "sale": true
     }
+  ],
+  "headphones": [
+    {
+      "id": 19,
+      "title": "headphones",
+      "code": "Y523201",
+      "price": 90,
+      "sale": {
+        "discount": 0.2
+      },
+      "imageUrl": "/products/46708a9cc75ccfc98ecbd55aae3c150a4cc681fe.png",
+      "description": "Magna in est adipiscing in phasellus non in justo.",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ]
+    }
+  ],
+  "laptop": [
+    {
+      "id": 19,
+      "title": "Laptop",
+      "code": "Y523201",
+      "price": 3500,
+      "sale": {
+        "discount": 0.2
+      },
+      "imageUrl": "/products/46708a9cc75ccfc98ecbd55aae3c150a4cc681fe.png",
+      "description": "Lorem ipsum in dolor amet magna in sinfigitus.",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ]
+    }
+  ],
+  "other": [
+    {
+      "id": 19,
+      "title": "Perfume",
+      "code": "Y523201",
+      "price": 15,
+      "sale": {
+        "discount": 0.2
+      },
+      "imageUrl": "/products/46708a9cc75ccfc98ecbd55aae3c150a4cc681fe.png",
+      "description": "Magna in est adipiscing in phasellus non in justo.",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ]
+    }
   ]
 }
