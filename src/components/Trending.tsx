@@ -1,54 +1,9 @@
-import { FlexCenter, FlexColumn } from "../styled-components/Flex.styles"
-import { Section } from "../styled-components/Section.styles"
-import { height, maxWidth, styled } from "@mui/system"
-import { Label } from "../styled-components/Typography.styles"
 import { ProductData } from "@/types/Product"
 import { useState, useEffect } from "react"
-import { PriceContainer, PriceDiscount } from "./Latest.styles"
+import { Card, PriceContainer, PriceDiscount } from "./Trending.styles"
+import { ImageWrapper } from "./Trending.styles";
+import { TrendingSection, ProductsWrapper, CardBody, ProductTitle } from "./Trending.styles";
 
-const TrendingSection = styled(Section)({
-})
-
-const Card = styled(FlexColumn)({
-  padding: 16,
-  boxShadow: 'var(--shadow)',
-  transition: 'all .3s ease-in-out',
-  ':hover': {
-    boxShadow: 'var(--shadow-large)',
-    transform: 'translateY(-25px)',
-  },
-  width: '100%',
-  alignItems: "center"
-})
-
-const CardBody = styled(FlexColumn)({
-  padding: 24,
-  alignItems: 'center'
-})
-
-const ProductTitle = styled(Label)({
-  color: 'var(--color-primary)',
-  textAlign: 'center',
-  textTransform: 'capitalize'
-})
-
-const ProductsWrapper = styled(FlexCenter)({
-  gap: 'var(--spacing-unit)',
-  maxWidth: 1280,
-  margin: '0 auto',
-  marginTop: 72
-})
-
-const ImageWrapper = styled('div')({
-  height: 232,
-  width: 272,
-  '& img': {
-    height: '100%',
-    width: '100%',
-    objectFit: 'cover'
-  },
-  overflow: 'hidden'
-})
 
 export default function Trending() {
   const [products, setProducts] = useState<ProductData[]>([]);
