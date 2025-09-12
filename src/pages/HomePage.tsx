@@ -4,6 +4,7 @@ import Latest from "../components/Latest";
 import Newsletter from "../components/Newsletter";
 import Discount from "../components/Discount";
 import Blog from "../components/Blog";
+import Trending from "../components/Trending";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Hero />
       <Latest />
       <Unique />
+      <Trending />
       <Discount />
       <Newsletter />
       <Blog />

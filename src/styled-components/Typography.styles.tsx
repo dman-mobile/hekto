@@ -30,13 +30,21 @@ export const Body = styled('p')({
   maxWidth: '60ch',
 })
 
+export const Label = styled('p')({
+  fontFamily: 'var(--font-family-primary)',
+  fontWeight: 700,
+  fontSize: 16,
+  lineHeight: '20px',
+  letterSpacing: 0,
+})
+
 export const LabelSmall = styled('p')({
   fontFamily: 'var(--font-family-primary)',
   fontWeight: 400,
   fontSize: 14,
   lineHeight: '16px',
   letterSpacing: 0
-})  
+})
 
 export const BodyLarge = styled(Body)({
   fontSize: 18,
