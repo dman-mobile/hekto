@@ -1,1 +1,3 @@
 export const BANNER_CYCLE_TIME = 10000;
+export const PRODUCTS_PER_PAGE_DESKTOP = 4;
+export const PRODUCTS_PER_PAGE_MOBILE = 2;
