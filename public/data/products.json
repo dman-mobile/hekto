@@ -336,5 +336,47 @@
         "Ergonomic design"
       ]
     }
+  ],
+  "trending": [
+    {
+      "id": 17,
+      "title": "black watch",
+      "code": "Y523201",
+      "price": 35,
+      "imageUrl": "/products/black-watch.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 18,
+      "title": "laptop",
+      "code": "Y523201",
+      "price": 3500,
+      "imageUrl": "/products/laptop.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 19,
+      "title": "headphones",
+      "code": "Y523201",
+      "price": 90,
+      "imageUrl": "/products/headphones.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 16,
+      "title": "watches",
+      "code": "A198451",
+      "price": 67,
+      "imageUrl": "/products/watch.jpg",
+      "sale": {
+        "discount": 0.05
+      }
+    }
   ]
 }
