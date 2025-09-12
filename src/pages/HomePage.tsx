@@ -5,6 +5,7 @@ import Newsletter from "../components/Newsletter";
 import Discount from "../components/Discount";
 import Blog from "../components/Blog";
 import Featured from "../components/Featured";
+import Trending from "../components/Trending";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Featured />
       <Latest />
       <Unique />
+      <Trending />
       <Discount />
       <Newsletter />
       <Blog />
