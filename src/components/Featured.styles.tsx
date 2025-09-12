@@ -1,6 +1,6 @@
 import { Section } from "../styled-components/Section.styles"
 import { Label, LabelSmall } from "../styled-components/Typography.styles"
-import { FlexCenter, FlexColumn } from "../styled-components/Flex.styles"
+import { FlexCenter, FlexColumn, FlexStart } from "../styled-components/Flex.styles"
 import { styled } from "@mui/system"
 
 export const PriceDiscount = styled('p')({
@@ -29,7 +29,9 @@ export const ProductCode = styled(LabelSmall)({
 })
 
 export const FeaturedSection = styled(Section)({
-  position: 'relative'
+  position: 'relative',
+  overflow: 'hidden',
+  paddingBottom: 0
 })
 
 export const CardActions = styled(FlexCenter)({
@@ -47,6 +49,10 @@ export const Card = styled(FlexColumn)({
   borderRadius: 'var(--border-radius)',
   boxShadow: 'var(--shadow)',
   transition: 'all .3s ease-in-out',
+  flexShrink: 0,
+  maxWidth: 304,
+  alignItems: "center",
+  gap: 0,
   '& .button-details': {
     position: 'absolute',
     margin: '0 auto',
@@ -63,9 +69,9 @@ export const Card = styled(FlexColumn)({
       opacity: 1
     }
   },
-  width: '100%',
-  alignItems: "center",
-  gap: 0
+  '& img': {
+    pointerEvents: 'none',
+  },
 })
 
 export const CardBody = styled(FlexColumn)({
@@ -80,12 +86,24 @@ export const ProductTitle = styled(Label)({
   textTransform: 'capitalize'
 })
 
-export const ProductsWrapper = styled(FlexCenter)({
-  gap: 'var(--spacing-unit)',
-  maxWidth: 1280,
-  margin: '0 auto',
-  marginTop: 72
+export const ProductsWrapper = styled(FlexStart)({
+  gap: '32px',
+  maxWidth: 1312,
+  margin: 'auto auto',
+  paddingTop: 72,
+  paddingBottom: 100,
+  overflow: 'hidden'
 })
+
+export const CarouselTrack = styled('div')({
+  display: 'flex',
+  transition: 'transform 0.5s ease-in-out',
+  gap: 'var(--spacing-unit)',
+  userSelect: 'none',
+  '&.grabbing': {
+    transition: 'none'
+  }
+});
 
 export const ImageWrapper = styled('div')({
   position: 'relative',

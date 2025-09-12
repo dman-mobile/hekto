@@ -5,28 +5,28 @@
       "title": "watch",
       "code": "Y523201",
       "price": 42,
-      "imageUrl": "/products/watch.avif"
+      "imageUrl": "/products/watch.jpg"
     },
     {
       "id": 19,
       "title": "headphones",
       "code": "Y523201",
       "price": 90,
-      "imageUrl": "/products/headphones.avif"
+      "imageUrl": "/products/headphones.png"
     },
     {
       "id": 18,
       "title": "laptop",
       "code": "Y523201",
       "price": 3500,
-      "imageUrl": "/products/laptop.avif"
+      "imageUrl": "/products/laptop.png"
     },
     {
       "id": 17,
       "title": "black watch",
       "code": "Y523201",
       "price": 35,
-      "imageUrl": "/products/black_watch.avif"
+      "imageUrl": "/products/black-watch.png"
     },
     {
       "id": 16,
@@ -78,13 +78,6 @@
       "imageUrl": "/products/a7c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7.jpg"
     },
     {
-      "id": 8,
-      "title": "Espresso Machine",
-      "code": "H890128",
-      "price": 275,
-      "imageUrl": "/products/b8d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8.png"
-    },
-    {
       "id": 9,
       "title": "Electric Toothbrush",
       "code": "I901239",
@@ -118,116 +111,6 @@
       "code": "M345673",
       "price": 425,
       "imageUrl": "/products/a3c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3.jpg"
-    },
-    {
-      "id": 14,
-      "title": "2TB External SSD",
-      "code": "N456784",
-      "price": 150,
-      "imageUrl": "/products/b4d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4.png"
-    },
-    {
-      "id": 15,
-      "title": "HD Webcam",
-      "code": "O567895",
-      "price": 65,
-      "imageUrl": "/products/c5e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5.jpg"
-    },
-    {
-      "id": 16,
-      "title": "LED Desk Lamp",
-      "code": "P678906",
-      "price": 40,
-      "imageUrl": "/products/d6f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6.png"
-    }
-  ],
-  "new": [
-    {
-      "id": 20,
-      "title": "game console",
-      "code": "Y523201",
-      "price": 76,
-      "imageUrl": "/products/587da503356759e895c70a62fd0cd82d62e643b9.jpg"
-    },
-    {
-      "id": 19,
-      "title": "shoes",
-      "code": "Y523201",
-      "price": 57,
-      "imageUrl": "/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
-    },
-    {
-      "id": 18,
-      "title": "perfume",
-      "code": "Y523201",
-      "price": 19,
-      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png",
-      "sale": true
-    },
-    {
-      "id": 17,
-      "title": "present box",
-      "code": "Y523201",
-      "price": 12,
-      "imageUrl": "/products/d56415a4b7736f1301d604f866095320c9ba9b48.png"
-    },
-    {
-      "id": 16,
-      "title": "watches",
-      "code": "A198451",
-      "price": 67,
-      "imageUrl": "/products/3f220e65a430d1cc5860cfb6c63ddda895c334df.png"
-    },
-    {
-      "id": 2,
-      "title": "ring",
-      "code": "B234562",
-      "price": 56,
-      "imageUrl": "/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png"
-    }
-  ],
-  "best": [
-    {
-      "id": 20,
-      "title": "game console",
-      "code": "Y523201",
-      "price": 76,
-      "imageUrl": "/products/587da503356759e895c70a62fd0cd82d62e643b9.jpg"
-    },
-    {
-      "id": 19,
-      "title": "shoes",
-      "code": "Y523201",
-      "price": 57,
-      "imageUrl": "/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
-    },
-    {
-      "id": 18,
-      "title": "perfume",
-      "code": "Y523201",
-      "price": 19,
-      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png"
-    },
-    {
-      "id": 17,
-      "title": "present box",
-      "code": "Y523201",
-      "price": 12,
-      "imageUrl": "/products/d56415a4b7736f1301d604f866095320c9ba9b48.png"
-    },
-    {
-      "id": 16,
-      "title": "watches",
-      "code": "A198451",
-      "price": 67,
-      "imageUrl": "/products/3f220e65a430d1cc5860cfb6c63ddda895c334df.png"
-    },
-    {
-      "id": 2,
-      "title": "ring",
-      "code": "B234562",
-      "price": 56,
-      "imageUrl": "/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png"
     }
   ],
   "offer": [
@@ -335,6 +218,48 @@
         "Simple neutral colours.",
         "Ergonomic design"
       ]
+    }
+  ],
+  "trending": [
+    {
+      "id": 17,
+      "title": "black watch",
+      "code": "Y523201",
+      "price": 35,
+      "imageUrl": "/products/black-watch.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 18,
+      "title": "laptop",
+      "code": "Y523201",
+      "price": 3500,
+      "imageUrl": "/products/laptop.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 19,
+      "title": "headphones",
+      "code": "Y523201",
+      "price": 90,
+      "imageUrl": "/products/headphones.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 16,
+      "title": "watches",
+      "code": "A198451",
+      "price": 67,
+      "imageUrl": "/products/watch.jpg",
+      "sale": {
+        "discount": 0.05
+      }
     }
   ]
 }
