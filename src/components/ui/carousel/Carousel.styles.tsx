@@ -28,3 +28,13 @@ export const CarouselDotSquare = styled('div', {
   transform: 'rotate(-45deg)',
 }));
 
+export const CarouselDotPill = styled('div', {
+  shouldForwardProp: (prop) => prop !== '$isActive',
+})<{ $isActive?: boolean }>(({ $isActive }) => ({
+  cursor: 'pointer',
+  transition: 'all 0.3s ease',
+  backgroundColor: $isActive ? 'var(--color-primary)' : 'var(--color-danger-light)',
+  width: $isActive ? 24 : 12,
+  height: 4,
+  borderRadius: 'var(--border-radius)'
+}));
