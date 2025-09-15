@@ -1,4 +1,137 @@
 {
+  "all": [
+    {
+      "id": 20,
+      "title": "watch",
+      "code": "Y523201",
+      "price": 42,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": {
+        "discount": 0.05
+      },
+      "imageUrl": "/products/watch.jpg"
+    },
+    {
+      "id": 19,
+      "title": "headphones",
+      "code": "Y523201",
+      "price": 90,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/headphones.png"
+    },
+    {
+      "id": 18,
+      "title": "laptop",
+      "code": "Y523201",
+      "price": 3500,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/laptop.png"
+    },
+    {
+      "id": 17,
+      "title": "black watch",
+      "code": "Y523201",
+      "price": 35,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/black-watch.png"
+    },
+    {
+      "id": 16,
+      "title": "Smart Speaker",
+      "code": "A198451",
+      "price": 59,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/smart-speaker.avif"
+    },
+    {
+      "id": 2,
+      "title": "Wireless Mouse",
+      "code": "B234562",
+      "price": 45,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/wireless-mouse.avif"
+    },
+    {
+      "id": 3,
+      "title": "Mechanical Keyboard",
+      "code": "C345673",
+      "price": 120,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/c3e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "4K Monitor",
+      "code": "D456784",
+      "price": 450,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/d4f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4.png"
+    },
+    {
+      "id": 5,
+      "title": "Leather Backpack",
+      "code": "E567895",
+      "price": 155,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/e5a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Running Shoes",
+      "code": "F678906",
+      "price": 110,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/f6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6.png"
+    },
+    {
+      "id": 7,
+      "title": "Aviator Sunglasses",
+      "code": "G789017",
+      "price": 85,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/a7c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Electric Toothbrush",
+      "code": "I901239",
+      "price": 79,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/c9e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Ergonomic Gaming Chair",
+      "code": "J012340",
+      "price": 320,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/d0f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0.png"
+    },
+    {
+      "id": 11,
+      "title": "Camera Drone",
+      "code": "K123451",
+      "price": 599,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/e1a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Noise-Cancelling Earbuds",
+      "code": "L234562",
+      "price": 180,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/f2b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2.png"
+    },
+    {
+      "id": 13,
+      "title": "11-inch Tablet",
+      "code": "M345673",
+      "price": 425,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "imageUrl": "/products/a3c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3.jpg"
+    }
+  ],
   "featured": [
     {
       "id": 20,

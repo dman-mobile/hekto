@@ -18,7 +18,8 @@ export const SubtitleSmall = styled('p')({
   fontWeight: 600,
   fontSize: 16,
   lineHeight: '20px',
-  letterSpacing: 0
+  letterSpacing: 0,
+  textTransform: 'capitalize'
 })
 
 export const Body = styled('p')({
