@@ -45,3 +45,21 @@ export const CalendarIcon = () => (
     <use href="/icons.svg#icon-calendar"></use>
   </svg>
 )
+
+export const FBIcon = () => (
+  <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+    <use href="/icons.svg#icon-fb"></use>
+  </svg>
+)
+
+export const TwitterIcon = () => (
+  <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+    <use href="/icons.svg#icon-twitter"></use>
+  </svg>
+)
+
+export const IGIcon = () => (
+  <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+    <use href="/icons.svg#icon-instagram"></use>
+  </svg>
+)

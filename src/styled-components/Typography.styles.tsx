@@ -8,6 +8,14 @@ export const Subtitle = styled('p')({
   letterSpacing: 1
 })
 
+export const SubtitleMedium = styled('p')({
+  fontFamily: 'var(--font-family-secondary)',
+  fontWeight: 700,
+  fontSize: 22,
+  lineHeight: '28px',
+  letterSpacing: 0
+})
+
 export const Title = styled('h1')({
   fontFamily: 'var(--font-family-primary)',
   maxWidth: 570
