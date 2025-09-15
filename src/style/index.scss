@@ -131,7 +131,7 @@ input {
   background-color: transparent;
   box-shadow: none;
 
-  font-family: inherit;
+  font-family: var(--font-family-secondary);
   font-size: inherit;
   color: inherit;
 
@@ -143,6 +143,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
 }
 
 input[type="number"]::-webkit-inner-spin-button,

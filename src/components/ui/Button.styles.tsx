@@ -40,6 +40,24 @@ export const ButtonSearch = styled('button')({
   },
 })
 
+export const Button = styled('button')({
+  maxWidth: 101,
+  cursor: 'pointer',
+  padding: '11px 16px',
+  transition: 'background 0.2s',
+  background: 'var(--color-primary)',
+  color: 'var(--color-white)',
+  borderRadius: 'var(--border-radius)',
+  border: 'none',
+  ":hover": {
+    background: 'var(--color-primary-dark)'
+  },
+  fontSize: 12,
+  fontWeight: 600,
+  fontFamily: 'var(--font-family-primary)'
+})
+
+
 export const ButtonSmall = styled('button')({
   maxWidth: 101,
   cursor: 'pointer',
