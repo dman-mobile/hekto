@@ -27,7 +27,9 @@ const AppHeader = () => {
       <HeaderContainer>
         <ContactContainer>
           <ContactField>
-            <img src="/mail.svg" alt="mail icon" />
+            <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <use href="/icons.svg#icon-mail"></use>
+            </svg>
             mwasyluk@griddynamics.com
           </ContactField>
           <ContactField>

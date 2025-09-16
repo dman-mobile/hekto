@@ -1,35 +1,39 @@
-import { Body } from "../styled-components/Typography.styles";
-import { GridIcon, ListIcon } from "../icons/Icons";
+import { ProductsNavProps } from "@/types/Product";
+import { GridIcon, GridIconFilled, ListIcon, ListIconFilled } from "../icons/Icons";
 import { FlexCenter, FlexStart } from "../styled-components/Flex.styles";
 import { Nav, NavWrapper } from "./Nav.styles";
-import { Select } from "./ui/Select.types";
+import { ViewPickerButton } from "./Products.styles";
+import PerPageSelector from "./ui/PerPageSelector";
+import SortSelector from './ui/SortSelector';
 
-export default function ProductsNav() {
+export default function ProductsNav({
+  itemsPerPage,
+  onPerPageChange,
+  sortBy,
+  onSortByChange,
+  view,
+  onViewChange,
+}: ProductsNavProps) {
   return (
     <Nav>
       <NavWrapper>
         <FlexCenter>
-          <Body>Per page</Body>
-          <Select className="picker" name='per-page' id='per-page'>
-            <option>10</option>
-            <option>20</option>
-          </Select>
+          <PerPageSelector value={itemsPerPage} onChange={onPerPageChange} />
         </FlexCenter>
         <FlexCenter>
-          <Body>Sort By</Body>
-          <Select name='sort' id='sort'>
-            <option>Price: High -&gt; Low</option>
-            <option>Price: Low -&gt; High</option>
-          </Select>
+          <SortSelector value={sortBy} onChange={onSortByChange} />
         </FlexCenter>
         <FlexCenter>
-          <Body>View</Body>
-          <FlexStart>
-            <GridIcon />
-            <ListIcon />
+          <FlexStart className="view-picker-container">
+            <ViewPickerButton isActive={view === 'grid'} onClick={() => onViewChange('grid')}>
+              {view === 'grid' ? <GridIconFilled /> : <GridIcon /> }
+            </ViewPickerButton>
+            <ViewPickerButton isActive={view === 'list'} onClick={() => onViewChange('list')}>
+              {view === 'list' ? <ListIconFilled /> : <ListIcon /> }
+            </ViewPickerButton>
           </FlexStart>
         </FlexCenter>
       </NavWrapper>
     </Nav>
-  )
+  );
 }

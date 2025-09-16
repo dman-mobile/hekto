@@ -1,6 +1,9 @@
 import { styled } from "@mui/system";
 
 export const Nav = styled('nav')({
+  '& .view-picker-container': {
+    gap: 16
+  }
 })
 
 export const NavWrapper = styled('nav')({

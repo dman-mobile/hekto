@@ -1,69 +1,56 @@
-import { FlexColumn } from "../styled-components/Flex.styles"
-import { Body, SubtitleSmall } from "../styled-components/Typography.styles"
-import { CartIcon, HeartIcon, StarEmptyIcon, StarIcon, ZoomIcon } from "../icons/Icons"
-import { useEffect, useState } from "react";
-import { ProductData } from "@/types/Product";
-import { CardActions, CardBody, CardHeader, ImageWrapper, PriceContainer, PriceDiscount, ProductCard, ProductsContainer, RatingContainer } from "./Products.styles";
+import { Body, SubtitleSmall } from "../styled-components/Typography.styles";
+import { CartIcon, HeartIcon, StarEmptyIcon, StarIcon, ZoomIcon } from "../icons/Icons";
+import { ProductsListProps } from "@/types/Product";
+import {
+  CardActions,
+  CardBody,
+  CardHeader,
+  ImageWrapper,
+  PriceContainer,
+  PriceDiscount,
+  ProductCard,
+  ProductsContainer,
+  RatingContainer,
+} from "./Products.styles";
 import { ButtonRound } from "./ui/Button.styles";
 
-export default function ProductsList() {
-  const [products, setProducts] = useState<ProductData[]>([]);
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const response = await fetch('/data/products.json');
-        const data = await response.json();
-        setProducts(data.all);
-        console.log(data.all)
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
-      }
-    };
-    getProducts();
-  }, []);
+export default function ProductsList({ products, view }: ProductsListProps) {
   return (
-    <ProductsContainer>
-      {products && products.map((product, index) =>
-        <ProductCard key={index}>
-          <ImageWrapper>
+    <ProductsContainer view={view}>
+      {products.map((product) => (
+        <ProductCard key={product.id} view={view}>
+          <ImageWrapper view={view}>
             <img src={product.imageUrl} alt={product.title} />
           </ImageWrapper>
-          <CardBody>
-            <CardHeader>
-              <FlexColumn>
-                <SubtitleSmall>{product.title}</SubtitleSmall>
-                {!product.sale &&
-                  <PriceContainer>
-                    <p>${product.price.toFixed(2)}</p>
-                  </PriceContainer>
-                }
-                {product.sale &&
-                  <PriceContainer>
-                    <p>${product.price.toFixed(2)}</p>
-                    <PriceDiscount>${(product.price + 15).toFixed(2)}</PriceDiscount>
-                  </PriceContainer>
-                }
-              </FlexColumn>
-              <RatingContainer>
-                <StarIcon />
-                <StarIcon />
-                <StarIcon />
-                <StarIcon />
-                <StarEmptyIcon />
+          <CardBody view={view}>
+            <CardHeader view={view}>
+              <SubtitleSmall>{product.title}</SubtitleSmall>
+              <RatingContainer view={view}>
+                {[...Array(5)].map((_, i) =>
+                  i < product.rating ? <StarIcon key={i} /> : <StarEmptyIcon key={i} />
+                )}
               </RatingContainer>
             </CardHeader>
-            <Body>
-              {product.description}
-            </Body>
+            {!product.sale &&
+              <PriceContainer>
+                <p>${product.price.toFixed(2)}</p>
+              </PriceContainer>
+            }
+            {product.sale &&
+              <PriceContainer>
+                <p>${product.price.toFixed(2)}</p>
+                <PriceDiscount>${(product.price + 15).toFixed(2)}</PriceDiscount>
+              </PriceContainer>
+            }
+            <Body className="description">{product.description}</Body>
             <CardActions>
-              <ButtonRound> <CartIcon /> </ButtonRound>
-              <ButtonRound> <HeartIcon /> </ButtonRound>
-              <ButtonRound> <ZoomIcon /> </ButtonRound>
+              <ButtonRound><CartIcon /></ButtonRound>
+              <ButtonRound><HeartIcon /></ButtonRound>
+              <ButtonRound><ZoomIcon /></ButtonRound>
             </CardActions>
           </CardBody>
         </ProductCard>
-      )
-      }
+      ))}
     </ProductsContainer>
-  )
+  );
 }

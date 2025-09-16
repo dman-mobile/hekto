@@ -15,12 +15,14 @@ export const Title = styled('h1')({
 
 export const SubtitleSmall = styled('p')({
   fontFamily: 'var(--font-family-primary)',
-  fontWeight: 600,
-  fontSize: 16,
-  lineHeight: '20px',
+  fontWeight: 700,
+  fontSize: 20,
+  lineHeight: '24px',
   letterSpacing: 0,
   textTransform: 'capitalize'
 })
+
+
 
 export const Body = styled('p')({
   fontFamily: 'var(--font-family-secondary)',
