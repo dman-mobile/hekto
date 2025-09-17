@@ -6,7 +6,7 @@ import { ButtonRound } from "./ui/Button.styles";
 import { ProductData, ProductCategory } from "@/types/Product";
 import { ITab } from "../types/Tabs";
 import SkeletonCard from "./LatestSkeletonCard";
-import { FETCH_DELAY } from "@/constants/constants";
+import { FETCH_DELAY } from "../constants/constants";
 
 const tabs: ITab<ProductCategory>[] = [
   { label: 'New Arrivals', category: 'new' },

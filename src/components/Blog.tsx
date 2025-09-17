@@ -4,7 +4,7 @@ import { Section } from "../styled-components/Section.styles";
 import { BlogCard, BlogCardBody, BlogInfo, BlogTitle, BlogWrapper, ReadMoreButton, SkeletonCard } from "./Blog.styles";
 import { BlogData } from "@/types/Blog";
 import { useEffect, useState } from "react";
-import { FETCH_DELAY } from "@/constants/constants";
+import { FETCH_DELAY } from "../constants/constants";
 
 export default function Blog() {
   const [blogPosts, setBlogPosts] = useState<BlogData[]>([]);

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { Card, PriceContainer, PriceDiscount, SkeletonCard } from "./Trending.styles"
 import { ImageWrapper } from "./Trending.styles";
 import { TrendingSection, ProductsWrapper, CardBody, ProductTitle } from "./Trending.styles";
-import { FETCH_DELAY } from "@/constants/constants";
+import { FETCH_DELAY } from "../constants/constants";
 
 
 export default function Trending() {
