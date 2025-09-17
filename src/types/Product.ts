@@ -13,3 +13,9 @@ export interface ProductData {
 }
 
 export type ProductCategory = 'new' | 'best' | 'featured' | 'offer' | 'headphones' | 'laptop' | 'other' | 'watch' | 'game-console' | 'clothing' | 'perfume';
+
+export interface CategoryData {
+  id: string,
+  title: string,
+  imageUrl: string
+}
