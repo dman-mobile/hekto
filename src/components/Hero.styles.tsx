@@ -2,6 +2,10 @@ import { Body } from '../styled-components/Typography.styles';
 import { FlexColumn, FlexContainer } from '../styled-components/Flex.styles';
 import { styled } from '@mui/material/styles'; // Corrected import
 
+export const HeroSection = styled('section')({
+  height: 760,
+})
+
 export const BannerWrapper = styled('div')({
   position: 'relative',
   overflow: 'hidden',
@@ -11,6 +15,7 @@ export const BannerWrapper = styled('div')({
 export const CarouselTrack = styled('div')({
   display: 'flex',
   transition: 'transform 0.5s ease-in-out',
+  height: 760
 });
 
 export const CarouselSlide = styled('div')({

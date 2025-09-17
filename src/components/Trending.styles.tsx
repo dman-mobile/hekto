@@ -55,3 +55,16 @@ export const ImageWrapper = styled('div')({
   },
   overflow: 'hidden'
 })
+
+export const SkeletonCard = styled(FlexColumn)({
+  transition: 'all .3s ease-in-out',
+  flexShrink: 0,
+  width: 304,
+  height: 380,
+  opacity: 1,
+  borderRadius: 'var(--border-radius)',
+  alignItems: "center",
+  gap: 0,
+  cursor: 'wait',
+  background: 'var(--color-gray-1)'
+})

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Body, Title } from "../styled-components/Typography.styles";
-import { Banner, BannerContent, BannerWrapper, CarouselSlide, CarouselTrack, DiscountTag, ImageContainer, LampImage, Subtitle } from "./Hero.styles";
+import { Banner, BannerContent, BannerWrapper, CarouselSlide, CarouselTrack, DiscountTag, HeroSection, ImageContainer, LampImage, Subtitle } from "./Hero.styles";
 import { ButtonBig } from "../components/ui/Button.styles";
 import CarouselDots from "../components/ui/carousel/CarouselDots";
 import { BannerData } from "@/types/Banner";
@@ -46,7 +46,7 @@ export default function Hero() {
   }
 
   return (
-    <section>
+    <HeroSection>
       <BannerWrapper>
         <LampImage src="/hero-lamp.png" alt="lamp" />
         <CarouselTrack style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
@@ -75,7 +75,7 @@ export default function Hero() {
           onDotClick={setActiveIndex}
         />
       </BannerWrapper>
-    </section>
+    </HeroSection>
   );
 }
 

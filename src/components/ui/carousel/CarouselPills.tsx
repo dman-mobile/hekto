@@ -6,7 +6,7 @@ export default function CarouselPills({ count, activeIndex, onDotClick }: Carous
   const dots = Array.from({ length: count });
 
   return (
-    <CarouselDotsWrapper>
+    <CarouselDotsWrapper className="carousel-dots-container">
       {dots.map((_, index) => (
         <CarouselDotPill
           key={index}
