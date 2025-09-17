@@ -1,5 +1,5 @@
 import { ProductsNavProps } from "@/types/Product";
-import { GridIcon, GridIconFilled, ListIcon, ListIconFilled } from "../icons/Icons";
+import { GridIcon, GridIconFilled, ListIcon, ListIconFilled } from "../icons/ProductsPageIcons.tsx";
 import { FlexCenter, FlexStart } from "../styled-components/Flex.styles";
 import { Nav, NavWrapper } from "./Nav.styles";
 import { ViewPickerButton } from "./Products.styles";

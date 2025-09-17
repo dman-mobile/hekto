@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDownIcon } from '../../icons/Icons';
+import { ChevronDownIcon } from '../../icons/ProductsPageIcons';
 import {
   IconWrapper,
   Label,

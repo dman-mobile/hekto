@@ -1,5 +1,6 @@
 import { Body, SubtitleSmall } from "../styled-components/Typography.styles";
-import { CartIcon, HeartIcon, StarEmptyIcon, StarIcon, ZoomIcon } from "../icons/Icons";
+import {  StarEmptyIcon, StarIcon,  } from "../icons/ProductsPageIcons";
+import {CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons";
 import { ProductsListProps } from "@/types/Product";
 import {
   CardActions,
