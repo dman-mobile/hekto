@@ -34,3 +34,9 @@ export interface ProductsNavProps {
   view: 'grid' | 'list';
   onViewChange: (newView: 'grid' | 'list') => void;
 }
+
+export interface CategoryData {
+  id: string,
+  title: string,
+  imageUrl: string
+}
