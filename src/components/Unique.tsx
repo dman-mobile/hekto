@@ -1,5 +1,4 @@
-import { Subtitle } from "../styled-components/Typography.styles";
-import { FlexCenter, FlexColumn, FlexStart } from "../styled-components/Flex.styles";
+import { FlexCenter, FlexStart } from "../styled-components/Flex.styles";
 import { Banner, BannerImage, BannerInfo, DescriptionList, DotBlue, DotGreen, DotPink, ListItem, UniqueWrapper } from "./Unique.styles";
 import { ButtonBig } from "./ui/Button.styles";
 
