@@ -7,6 +7,12 @@ export const BlogTitle = styled(SubtitleSmall)({
   paddingBottom: 16,
   paddingTop: 24,
   transition: 'color .3s ease-in-out',
+  fontFamily: 'var(--font-family-primary)',
+  fontWeight: 600,
+  fontSize: 16,
+  lineHeight: '20px',
+  letterSpacing: 0,
+  textTransform: 'capitalize'
 })
 
 export const BlogCard = styled(FlexColumn)({
