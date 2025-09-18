@@ -1,6 +1,6 @@
 import { Section } from "../styled-components/Section.styles"
 import { Label } from "../styled-components/Typography.styles"
-import { FlexCenter, FlexStart } from "../styled-components/Flex.styles"
+import { FlexCenter, FlexColumn, FlexStart } from "../styled-components/Flex.styles"
 import { styled } from "@mui/system"
 
 export const PriceDiscount = styled('p')({
@@ -115,4 +115,17 @@ export const CardBackground = styled('img')({
   top: 34,
   left: 0,
   zIndex: 2
+})
+
+export const SkeletonCard = styled(FlexColumn)({
+  transition: 'all .3s ease-in-out',
+  flexShrink: 0,
+  width: 304,
+  height: 368,
+  opacity: 1,
+  borderRadius: 'var(--border-radius)',
+  alignItems: "center",
+  gap: 0,
+  cursor: 'wait',
+  background: 'var(--color-gray-1)'
 })

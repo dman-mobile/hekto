@@ -5,6 +5,8 @@ import { Card, CardActions, Grid, Image, ImageContainer, LatestSection, PriceCon
 import { ButtonRound } from "./ui/Button.styles";
 import { ProductData, ProductCategory } from "@/types/Product";
 import { ITab } from "../types/Tabs";
+import SkeletonCard from "./LatestSkeletonCard";
+import { FETCH_DELAY } from "../constants/constants";
 
 const tabs: ITab<ProductCategory>[] = [
   { label: 'New Arrivals', category: 'new' },
@@ -16,15 +18,25 @@ const tabs: ITab<ProductCategory>[] = [
 export default function Latest() {
   const [products, setProducts] = useState<ProductData[]>([]);
   const [activeTab, setActiveTab] = useState<ProductCategory>('new');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
     const getProducts = async () => {
+      setLoading(true);
       try {
-        const response = await fetch('/data/products.json');
+        const [response] = await Promise.all([
+          fetch('/data/products.json'),
+          delay(FETCH_DELAY)
+        ]);
+
         const data = await response.json();
         setProducts(data[activeTab]);
       } catch (error) {
         console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
       }
     };
     getProducts();
@@ -45,6 +57,16 @@ export default function Latest() {
         ))}
       </TabsBar>
       <Grid>
+        {loading &&
+          <>
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+          </>
+        }
         {products && products.slice(0, 6).map((product) => (
           <Card key={product.id}>
             <ImageContainer>

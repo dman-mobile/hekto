@@ -1,4 +1,4 @@
-import { StarEmptyIcon, StarIcon } from "../icons/Icons";
+import { StarEmptyIcon, StarIcon } from "../icons/ProductsPageIcons";
 import { RatingWrapper } from "../components/Filters.styles";
 
 export const renderRating = (rating: number) => (

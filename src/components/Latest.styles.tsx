@@ -101,3 +101,34 @@ export const Title = styled('p')({
 export const PriceContainer = styled(FlexCenter)({
   gap: 16
 })
+
+export const SkeletonCard = styled(FlexColumn)({
+  gap: 12,
+  width: 416,
+  height: 304,
+  overflow: 'hidden',
+  ':hover': {
+    '& button': {
+      opacity: 1
+    }
+  },
+  position: "relative",
+  '& .skeleton-body-top': {
+    background: 'var(--color-gray-1)',
+    width: 416,
+    height: 272,
+    borderRadius: 8
+  },
+  '& .skeleton-body-left': {
+    width: 233,
+    height: 24,
+    borderRadius: 8,
+    background: 'var(--color-gray-1)'
+  },
+  '& .skeleton-body-right': {
+    width: 99,
+    height: 24,
+    borderRadius: 8,
+    background: 'var(--color-gray-1)'
+  },
+})

@@ -1,15 +1,16 @@
 import { ProductData } from "@/types/Product"
 import { useState, useEffect, useRef } from "react"
-import { Card, CardActions, Price, PriceContainer, PriceDiscount, ProductCode } from "./Featured.styles.tsx"
+import { Card, CardActions, Price, PriceContainer, PriceDiscount, ProductCode, SkeletonCard } from "./Featured.styles.tsx"
 import { ImageWrapper } from "./Featured.styles.tsx";
 import { FeaturedSection, ProductsWrapper, CardBody, ProductTitle, CarouselTrack } from "./Featured.styles.tsx";
 import { ButtonRound, ButtonSmall } from "./ui/Button.styles.tsx";
 import { CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons.tsx";
-import { PRODUCTS_PER_PAGE_DESKTOP } from "../constants/constants.ts";
+import { FETCH_DELAY, PRODUCTS_PER_PAGE_DESKTOP } from "../constants/constants.ts";
 import CarouselPills from "./ui/carousel/CarouselPills.tsx";
 
 export default function Featured() {
   const [products, setProducts] = useState<ProductData[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [pages, setPages] = useState<number>(0);
@@ -25,15 +26,23 @@ export default function Featured() {
   const GAP = 32;
 
   useEffect(() => {
+    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
     const getProducts = async () => {
       try {
-        const response = await fetch('/data/products.json');
+        const [response] = await Promise.all([
+          fetch('/data/products.json'),
+          delay(FETCH_DELAY)
+        ]);
+        
         const data = await response.json();
         const featuredProducts = data.featured;
         setProducts(featuredProducts);
         setPages(Math.ceil(featuredProducts.length / PRODUCTS_PER_PAGE_DESKTOP));
       } catch (error) {
         console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
       }
     };
     getProducts();
@@ -109,7 +118,14 @@ export default function Featured() {
           onPointerUp={handlePointerUp}
           onPointerLeave={handlePointerUp}
         >
-          {products && products.map((product, index) =>
+          {loading && 
+          <>
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+          </>}
+          {products && !loading && products.map((product, index) =>
             <Card key={index} onDragStart={(e) => e.preventDefault()}>
               <ImageWrapper>
                 <img src={product.imageUrl} alt={product.title} />

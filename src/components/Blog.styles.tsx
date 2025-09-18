@@ -19,8 +19,8 @@ export const BlogCard = styled(FlexColumn)({
   userSelect: 'none',
   msUserSelect: 'none',
   MozUserSelect: 'none',
-  maxWidth: 416,
-  width: '100%',
+  height: 473,
+  width: 357,
   borderRadius: 'var(--border-radius)',
   boxShadow: 'var(--shadow)',
   transition: 'all .3s ease-in-out',
@@ -32,7 +32,8 @@ export const BlogCard = styled(FlexColumn)({
     },
   },
   '& > img': {
-    maxWidth: '100%',
+    width: 356,
+    height: 238,
     objectFit: 'cover',
     borderRadius: 'var(--border-radius)',
   }
@@ -68,4 +69,14 @@ export const BlogWrapper = styled(FlexCenter)({
 
 export const ReadMoreButton = styled(ButtonText)({
   marginTop: 36
+})
+
+export const SkeletonCard = styled(FlexColumn)({
+  userSelect: 'none',
+  msUserSelect: 'none',
+  MozUserSelect: 'none',
+  height: 473,
+  width: 357,
+  borderRadius: 'var(--border-radius)',
+  background: 'var(--color-gray-1)'
 })

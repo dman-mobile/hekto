@@ -31,7 +31,10 @@ export const ProductCode = styled(LabelSmall)({
 export const FeaturedSection = styled(Section)({
   position: 'relative',
   overflow: 'hidden',
-  paddingBottom: 0
+  paddingBottom: 0,
+  '& .carousel-dots-container': {
+    bottom: 44
+  }
 })
 
 export const CardActions = styled(FlexCenter)({
@@ -116,4 +119,17 @@ export const ImageWrapper = styled('div')({
     width: '100%',
     objectFit: 'cover'
   },
+})
+
+export const SkeletonCard = styled(FlexColumn)({
+  transition: 'all .3s ease-in-out',
+  flexShrink: 0,
+  width: 304,
+  height: 368,
+  opacity: 1,
+  borderRadius: 'var(--border-radius)',
+  alignItems: "center",
+  gap: 0,
+  cursor: 'wait',
+  background: 'var(--color-gray-1)'
 })
