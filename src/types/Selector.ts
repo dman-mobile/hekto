@@ -12,16 +12,23 @@ export interface SortSelectorProps {
   label?: string;
 }
 
+export enum Currency {
+  USD = "USD",
+  ARS = "AR$",
+}
+
+export enum Language {
+  english = "English",
+  español = "Español",
+}
+
+
 export interface LanguageSelectorProps {
-  value: string;
-  onChange: (newValue: string) => void;
-  options?: string[];
-  label?: string;
+  value: Language;
+  onChange: (value: Language) => void;
 }
 
 export interface CurrencySelectorProps {
-  value: string;
-  onChange: (newValue: string) => void;
-  options?: string[];
-  label?: string;
+  value: Currency;
+  onChange: (value: Currency) => void;
 }

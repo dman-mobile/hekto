@@ -1,22 +1,15 @@
 import React from 'react';
 import { ChevronDownIcon } from '../../icons/ProductsPageIcons';
-import {
-  IconWrapper,
-  SelectWrapper,
-  StyledSelect,
-  Wrapper,
-} from './Selector.styles.tsx';
-import { LanguageSelectorProps } from '@/types/Selector';
+import { IconWrapper, SelectWrapper, StyledSelect, Wrapper } from './Selector.styles';
+import { LanguageSelectorProps, Language } from '../../types/Selector';
 
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({
-  value,
-  onChange,
-  options = ["English", "Español"],
-}) => {
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({ value, onChange }) => {
   const selectId = 'language';
 
+  const options = Object.values(Language);
+
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    onChange(event.target.value);
+    onChange(event.target.value as Language);
   };
 
   return (

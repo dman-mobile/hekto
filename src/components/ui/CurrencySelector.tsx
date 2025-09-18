@@ -1,22 +1,15 @@
 import React from 'react';
-import { ChevronDownIcon } from '../../icons/ProductsPageIcons.tsx';
-import {
-  IconWrapper,
-  SelectWrapper,
-  StyledSelect,
-  Wrapper,
-} from './Selector.styles.tsx';
-import { CurrencySelectorProps } from '@/types/Selector';
+import { ChevronDownIcon } from '../../icons/ProductsPageIcons';
+import { IconWrapper, SelectWrapper, StyledSelect, Wrapper } from './Selector.styles';
+import { CurrencySelectorProps, Currency } from '../../types/Selector';
 
-const CurrencySelector: React.FC<CurrencySelectorProps> = ({
-  value,
-  onChange,
-  options = ["USD", "AR$"],
-}) => {
+const CurrencySelector: React.FC<CurrencySelectorProps> = ({ value, onChange }) => {
   const selectId = 'currency';
 
+  const options = Object.values(Currency);
+
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    onChange(event.target.value);
+    onChange(event.target.value as Currency);
   };
 
   return (
