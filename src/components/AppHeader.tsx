@@ -18,6 +18,7 @@ import { ChevronDownIcon } from "../icons/ProductsPageIcons";
 import { CartIcon } from "../icons/Icons";
 import LanguageSelector from "./ui/LanguageSelector";
 import CurrencySelector from "./ui/CurrencySelector";
+import { Currency, Language } from "../types/Selector";
 
 const AppHeader = () => {
   const navLinkStyles = ({ isActive }: NavLinkStyleProps) => {
@@ -40,10 +41,10 @@ const AppHeader = () => {
           </ContactField>
         </ContactContainer>
         <MenuContainer>
-          <LanguageSelector value={"English"} onChange={function (newValue: string): void {
+          <LanguageSelector value={Language.english} onChange={function (newValue: string): void {
             throw new Error("Function not implemented.");
           }} /> {/* Será implementado con Redux Toolkit mas adelante*/}
-          <CurrencySelector value={"USD"} onChange={function (newValue: string): void {
+          <CurrencySelector value={Currency.USD} onChange={function (newValue: string): void {
             throw new Error("Function not implemented.");
           } } /> {/* Será implementado con Redux Toolkit mas adelante*/}
           <MenuLink>
