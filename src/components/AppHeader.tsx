@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import {
   ContactContainer,
   ContactField,
-  Dropdown,
   HeaderContainer,
   HeaderWrapper,
   MenuContainer,
@@ -14,6 +13,11 @@ import {
 import { FlexCenter } from "../styled-components/Flex.styles";
 import Input from "./ui/Input";
 import { NavLinkStyleProps } from "@/types/Links";
+import { MailIcon, PhoneIcon, UserIcon } from "../icons/HeaderIcons";
+import { ChevronDownIcon } from "../icons/ProductsPageIcons";
+import { CartIcon } from "../icons/Icons";
+import LanguageSelector from "./ui/LanguageSelector";
+import CurrencySelector from "./ui/CurrencySelector";
 
 const AppHeader = () => {
   const navLinkStyles = ({ isActive }: NavLinkStyleProps) => {
@@ -27,45 +31,31 @@ const AppHeader = () => {
       <HeaderContainer>
         <ContactContainer>
           <ContactField>
-            <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-              <use href="/icons.svg#icon-mail"></use>
-            </svg>
+            <MailIcon />
             mwasyluk@griddynamics.com
           </ContactField>
           <ContactField>
-            <img src="/phone.png" alt="phone icon" />
+            <PhoneIcon />
             (12345)67890
           </ContactField>
         </ContactContainer>
         <MenuContainer>
-          <Dropdown>
-            English
-            <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-              <use href="/icons.svg#chevron-down"></use>
-            </svg>
-          </Dropdown>
-          <Dropdown>
-            USD
-            <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-              <use href="/icons.svg#chevron-down"></use>
-            </svg>
-          </Dropdown>
+          <LanguageSelector value={"English"} onChange={function (newValue: string): void {
+            throw new Error("Function not implemented.");
+          }} /> {/* Será implementado con Redux Toolkit mas adelante*/}
+          <CurrencySelector value={"USD"} onChange={function (newValue: string): void {
+            throw new Error("Function not implemented.");
+          } } /> {/* Será implementado con Redux Toolkit mas adelante*/}
           <MenuLink>
             Login
-            <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-              <use href="/icons.svg#icon-user"></use>
-            </svg>
+            <UserIcon />
           </MenuLink>
           <MenuLink>
             Wishlist
-            <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-              <use href="/icons.svg#chevron-down"></use>
-            </svg>
+            <ChevronDownIcon />
           </MenuLink>
           <NavLink to={'/cart'}>
-            <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-              <use href="/icons.svg#icon-cart"></use>
-            </svg>
+            <CartIcon />
           </NavLink>
         </MenuContainer>
       </HeaderContainer>
@@ -73,14 +63,14 @@ const AppHeader = () => {
         <NavContainer>
           <FlexCenter>
             <img src="/Logo.png" alt="logo" />
-            <NavLinks sx={{ marginLeft: 8 }}>
+            <NavLinks>
               <li><NavLink to={'/'} style={navLinkStyles}>Home</NavLink></li>
               <li><NavLink to={'/products'} style={navLinkStyles}>Products</NavLink></li>
               <li><NavLink to={'/blog'} style={navLinkStyles}>Blog</NavLink></li>
               <li><NavLink to={'/contact'} style={navLinkStyles}>Contact</NavLink></li>
             </NavLinks>
           </FlexCenter>
-          <Input />
+          <Input inputType="search" />
         </NavContainer>
       </NavWrapper>
     </HeaderWrapper>

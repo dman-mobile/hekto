@@ -11,3 +11,17 @@ export interface SortSelectorProps {
   options?: string[];
   label?: string;
 }
+
+export interface LanguageSelectorProps {
+  value: string;
+  onChange: (newValue: string) => void;
+  options?: string[];
+  label?: string;
+}
+
+export interface CurrencySelectorProps {
+  value: string;
+  onChange: (newValue: string) => void;
+  options?: string[];
+  label?: string;
+}

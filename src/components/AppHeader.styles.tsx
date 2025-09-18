@@ -74,5 +74,6 @@ export const NavLinks = styled('ul')({
   justifyContent: 'center',
   alignItems: 'center',
   gap: 'var(--spacing-unit)',
+  marginLeft: 8
 })
 
