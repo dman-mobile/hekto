@@ -11,5 +11,16 @@ export const InputWrapper = styled('div')({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingLeft: 16
+  paddingLeft: 16,
+  '& input': {
+    fontFamily: 'var(--font-family-secondary)',
+    fontSize: 14,
+    lineHeight: '16px',
+    letterSpacing: 0,
+    color: 'var(--color-black)',
+    '::placeholder': {
+      color: 'var(--color-gray-3)',
+      fontFamily: 'inherit'
+    }
+  }
 })
