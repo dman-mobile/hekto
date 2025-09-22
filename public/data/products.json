@@ -1,0 +1,522 @@
+{
+  "new": [
+    {
+      "id": 1,
+      "title": "Casio Digital Watch",
+      "code": "Y523201",
+      "rating": 4,
+      "price": 42.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Casio",
+      "category": "Watches",
+      "imageUrl": "/products/watch.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Sony Noise Cancelling Headphones",
+      "code": "Y523202",
+      "rating": 5,
+      "price": 95.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Sony",
+      "category": "Headphones",
+      "imageUrl": "/products/headphones.png"
+    },
+    {
+      "id": 3,
+      "title": "Apple Macbook Pro",
+      "code": "Y523203",
+      "price": 799.00,
+      "rating": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Apple",
+      "category": "Laptop",
+      "imageUrl": "/products/laptop.png"
+    },
+    {
+      "id": 4,
+      "title": "Casio Classic Black Watch",
+      "code": "Y523204",
+      "rating": 4,
+      "price": 35.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Casio",
+      "category": "Watches",
+      "imageUrl": "/products/black-watch.png"
+    },
+    {
+      "id": 5,
+      "title": "Apple Magic Mouse",
+      "code": "A198451",
+      "rating": 4,
+      "price": 59.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Apple",
+      "category": "Laptop",
+      "imageUrl": "/products/wireless-mouse.avif"
+    },
+    {
+      "id": 6,
+      "title": "Nike Air Max Shoes",
+      "code": "B234562",
+      "rating": 3,
+      "price": 130.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Nike",
+      "category": "Clothe",
+      "imageUrl": "/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
+    }
+  ],
+  "best": [
+    {
+      "id": 1,
+      "title": "Casio Digital Watch",
+      "code": "Y523201",
+      "rating": 4,
+      "price": 42.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Casio",
+      "category": "Watches",
+      "imageUrl": "/products/watch.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Sony Noise Cancelling Headphones",
+      "code": "Y523202",
+      "rating": 5,
+      "price": 95.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Sony",
+      "category": "Headphones",
+      "imageUrl": "/products/headphones.png"
+    },
+    {
+      "id": 3,
+      "title": "Apple Macbook Pro",
+      "code": "Y523203",
+      "price": 799.00,
+      "rating": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Apple",
+      "category": "Laptop",
+      "imageUrl": "/products/laptop.png"
+    },
+    {
+      "id": 4,
+      "title": "Casio Classic Black Watch",
+      "code": "Y523204",
+      "rating": 4,
+      "price": 35.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Casio",
+      "category": "Watches",
+      "imageUrl": "/products/black-watch.png"
+    },
+    {
+      "id": 5,
+      "title": "Apple Magic Mouse",
+      "code": "A198451",
+      "rating": 4,
+      "price": 59.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Apple",
+      "category": "Laptop",
+      "imageUrl": "/products/wireless-mouse.avif"
+    },
+    {
+      "id": 6,
+      "title": "Nike Air Max Shoes",
+      "code": "B234562",
+      "rating": 3,
+      "price": 130.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Nike",
+      "category": "Clothe",
+      "imageUrl": "/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
+    }
+  ],
+  "all": [
+    {
+      "id": 1,
+      "title": "Casio Digital Watch",
+      "code": "Y523201",
+      "rating": 4,
+      "price": 42.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Casio",
+      "category": "Watches",
+      "imageUrl": "/products/watch.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Sony Noise Cancelling Headphones",
+      "code": "Y523202",
+      "rating": 5,
+      "price": 95.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Sony",
+      "category": "Headphones",
+      "imageUrl": "/products/headphones.png"
+    },
+    {
+      "id": 3,
+      "title": "Apple Macbook Pro",
+      "code": "Y523203",
+      "price": 799.00,
+      "rating": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Apple",
+      "category": "Laptop",
+      "imageUrl": "/products/laptop.png"
+    },
+    {
+      "id": 4,
+      "title": "Casio Classic Black Watch",
+      "code": "Y523204",
+      "rating": 4,
+      "price": 35.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Casio",
+      "category": "Watches",
+      "imageUrl": "/products/black-watch.png"
+    },
+    {
+      "id": 5,
+      "title": "Apple Magic Mouse",
+      "code": "A198451",
+      "rating": 4,
+      "price": 59.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Apple",
+      "category": "Laptop",
+      "imageUrl": "/products/wireless-mouse.avif"
+    },
+    {
+      "id": 6,
+      "title": "Nike Air Max Shoes",
+      "code": "B234562",
+      "rating": 3,
+      "price": 130.00,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Nike",
+      "category": "Clothe",
+      "imageUrl": "/products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png"
+    },
+    {
+      "id": 7,
+      "title": "Sony Playstation Controller",
+      "code": "Y523207",
+      "price": 76.00,
+      "rating": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Sony",
+      "category": "Game Console",
+      "imageUrl": "/products/587da503356759e895c70a62fd0cd82d62e643b9.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Glossiness Perfume",
+      "code": "Y523208",
+      "price": 19.00,
+      "rating": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Glossiness",
+      "category": "Perfume",
+      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png"
+    },
+    {
+      "id": 9,
+      "title": "Vke Jewellery Box",
+      "code": "Y523209",
+      "price": 12.00,
+      "rating": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "brand": "Vke",
+      "category": "Jewellery",
+      "imageUrl": "/products/d56415a4b7736f1301d604f866095320c9ba9b48.png"
+    },
+    {
+      "id": 10,
+      "title": "Diamond Engagement Ring",
+      "code": "B234510",
+      "price": 650.00,
+      "rating": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
+      "sale": true,
+      "brand": "Glossiness",
+      "category": "Jewellery",
+      "imageUrl": "/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png"
+    }
+  ],
+  "featured": [
+    {
+      "id": 20,
+      "title": "watch",
+      "code": "Y523201",
+      "price": 42,
+      "imageUrl": "/products/watch.jpg"
+    },
+    {
+      "id": 19,
+      "title": "headphones",
+      "code": "Y523201",
+      "price": 90,
+      "imageUrl": "/products/headphones.png"
+    },
+    {
+      "id": 18,
+      "title": "laptop",
+      "code": "Y523201",
+      "price": 3500,
+      "imageUrl": "/products/laptop.png"
+    },
+    {
+      "id": 17,
+      "title": "black watch",
+      "code": "Y523201",
+      "price": 35,
+      "imageUrl": "/products/black-watch.png"
+    },
+    {
+      "id": 16,
+      "title": "Smart Speaker",
+      "code": "A198451",
+      "price": 59,
+      "imageUrl": "/products/smart-speaker.avif"
+    },
+    {
+      "id": 2,
+      "title": "Wireless Mouse",
+      "code": "B234562",
+      "price": 45,
+      "imageUrl": "/products/wireless-mouse.avif"
+    },
+    {
+      "id": 3,
+      "title": "Mechanical Keyboard",
+      "code": "C345673",
+      "price": 120,
+      "imageUrl": "/products/c3e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "4K Monitor",
+      "code": "D456784",
+      "price": 450,
+      "imageUrl": "/products/d4f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4.png"
+    },
+    {
+      "id": 5,
+      "title": "Leather Backpack",
+      "code": "E567895",
+      "price": 155,
+      "imageUrl": "/products/e5a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Running Shoes",
+      "code": "F678906",
+      "price": 110,
+      "imageUrl": "/products/f6b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6.png"
+    },
+    {
+      "id": 7,
+      "title": "Aviator Sunglasses",
+      "code": "G789017",
+      "price": 85,
+      "imageUrl": "/products/a7c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Electric Toothbrush",
+      "code": "I901239",
+      "price": 79,
+      "imageUrl": "/products/c9e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Ergonomic Gaming Chair",
+      "code": "J012340",
+      "price": 320,
+      "imageUrl": "/products/d0f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0.png"
+    },
+    {
+      "id": 11,
+      "title": "Camera Drone",
+      "code": "K123451",
+      "price": 599,
+      "imageUrl": "/products/e1a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Noise-Cancelling Earbuds",
+      "code": "L234562",
+      "price": 180,
+      "imageUrl": "/products/f2b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2.png"
+    },
+    {
+      "id": 13,
+      "title": "11-inch Tablet",
+      "code": "M345673",
+      "price": 425,
+      "imageUrl": "/products/a3c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3.jpg"
+    }
+  ],
+  "offer": [
+    {
+      "id": 20,
+      "title": "game console",
+      "code": "Y523201",
+      "price": 76,
+      "imageUrl": "/products/587da503356759e895c70a62fd0cd82d62e643b9.jpg",
+      "sale": true
+    },
+    {
+      "id": 19,
+      "title": "shoes",
+      "code": "Y523201",
+      "price": 57,
+      "imageUrl": "products/74fafe731bdbc5f70cdc99093d3c1c112be955f9.png",
+      "sale": true
+    },
+    {
+      "id": 18,
+      "title": "perfume",
+      "code": "Y523201",
+      "price": 19,
+      "imageUrl": "/products/d5388654c557c954e945d3083f43778ab31ab2fa.png",
+      "sale": true
+    },
+    {
+      "id": 17,
+      "title": "present box",
+      "code": "Y523201",
+      "price": 12,
+      "imageUrl": "/products/d56415a4b7736f1301d604f866095320c9ba9b48.png",
+      "sale": true
+    },
+    {
+      "id": 16,
+      "title": "watches",
+      "code": "A198451",
+      "price": 67,
+      "imageUrl": "/products/3f220e65a430d1cc5860cfb6c63ddda895c334df.png",
+      "sale": true
+    },
+    {
+      "id": 2,
+      "title": "ring",
+      "code": "B234562",
+      "price": 56,
+      "imageUrl": "/products/62c35caa8f68afb55bf81cb68d00918de12b26c3.png",
+      "sale": true
+    }
+  ],
+  "headphones": [
+    {
+      "id": 19,
+      "title": "headphones",
+      "code": "Y523201",
+      "price": 90,
+      "sale": {
+        "discount": 0.2
+      },
+      "imageUrl": "/products/46708a9cc75ccfc98ecbd55aae3c150a4cc681fe.png",
+      "description": "Magna in est adipiscing in phasellus non in justo.",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ]
+    }
+  ],
+  "laptop": [
+    {
+      "id": 19,
+      "title": "Laptop",
+      "code": "Y523201",
+      "price": 3500,
+      "sale": {
+        "discount": 0.2
+      },
+      "imageUrl": "/products/46708a9cc75ccfc98ecbd55aae3c150a4cc681fe.png",
+      "description": "Lorem ipsum in dolor amet magna in sinfigitus.",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ]
+    }
+  ],
+  "other": [
+    {
+      "id": 19,
+      "title": "Perfume",
+      "code": "Y523201",
+      "price": 15,
+      "sale": {
+        "discount": 0.2
+      },
+      "imageUrl": "/products/46708a9cc75ccfc98ecbd55aae3c150a4cc681fe.png",
+      "description": "Magna in est adipiscing in phasellus non in justo.",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ]
+    }
+  ],
+  "trending": [
+    {
+      "id": 17,
+      "title": "black watch",
+      "code": "Y523201",
+      "price": 35,
+      "imageUrl": "/products/black-watch.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 18,
+      "title": "laptop",
+      "code": "Y523201",
+      "price": 3500,
+      "imageUrl": "/products/laptop.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 19,
+      "title": "headphones",
+      "code": "Y523201",
+      "price": 90,
+      "imageUrl": "/products/headphones.png",
+      "sale": {
+        "discount": 0.05
+      }
+    },
+    {
+      "id": 16,
+      "title": "watches",
+      "code": "A198451",
+      "price": 67,
+      "imageUrl": "/products/watch.jpg",
+      "sale": {
+        "discount": 0.05
+      }
+    }
+  ]
+}

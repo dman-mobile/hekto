@@ -1,0 +1,28 @@
+{
+  "latest": [
+    {
+      "id": 1,
+      "title": "Top essential trends in 2023",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit hendrerit ex.",
+      "date": "21 August, 2023",
+      "author": "Matías Wasyluk",
+      "thumbnail": "/blog/9e7e909c6de3d358d2ea968a5624e707d8c55157.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Top essential trends in 2025",
+      "body": "Nullam nec fringilla erat, ac dapibus nunc. Integer semper ipsum in fermentum aliquam.",
+      "date": "19 May, 2025",
+      "author": "Matías Wasyluk",
+      "thumbnail": "/blog/62870a73cbbe0be3bb081d3dd4e072cd840872d6.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Top essential trends in 2024",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit hendrerit ex.",
+      "date": "18 December, 2024",
+      "author": "Matías Wasyluk",
+      "thumbnail": "/blog/e3c4499d9a11a4d1f9f95293b7180830d656c096.jpg"
+    }
+  ]
+}
