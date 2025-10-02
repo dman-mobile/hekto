@@ -114,6 +114,7 @@ export const Pagination = styled(FlexCenter)({
   maxWidth: 1280,
   margin: '0 auto',
   paddingTop: 48,
+  paddingBottom: 100,
   gap: 8,
   justifyContent: 'end',
   width: '100%'
