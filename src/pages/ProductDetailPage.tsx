@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ProductData } from "@/types/Product";
 import { useEffect, useState } from "react";
 import ProductDetailSkeleton from "@/components/ProductDetails/ProductDetailSkeleton";
+import Related from "@/components/ProductDetails/Related";
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -46,6 +47,7 @@ export default function ProductDetailPage() {
   return (
     <>
       <ProductDetail product={product} />
+      <Related />
     </>
   );
 }
