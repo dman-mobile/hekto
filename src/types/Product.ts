@@ -11,7 +11,10 @@ export interface ProductData {
   category: string,
   description: string,
   rating: 1 | 2 | 3 | 4 | 5,
-  features: Array<string>
+  features: Array<string>,
+  additionalInfo: string,
+  longDescription: { body: string, title: string },
+  images: Array<string>,
 }
 
 export type ProductCategory = 'new' | 'best' | 'featured' | 'offer' | 'headphones' | 'laptop' | 'other' | 'watch' | 'game-console' | 'clothing' | 'perfume';
@@ -39,4 +42,11 @@ export interface CategoryData {
   id: string,
   title: string,
   imageUrl: string
+}
+
+export enum ProductDescription {
+  description = "description",
+  additionalInfo = "additional-info",
+  reviews = "reviews",
+  video = "video"
 }
