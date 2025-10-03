@@ -73,11 +73,7 @@ export const Card = styled(FlexColumn)({
     opacity: 0
   },
   ':hover': {
-    boxShadow: 'var(--shadow-large)',
-    transform: 'translateY(-25px)',
-    '& button': {
-      opacity: 1
-    }
+    cursor: 'pointer'
   },
   '& img': {
     pointerEvents: 'none',
