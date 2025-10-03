@@ -80,7 +80,13 @@
       "sale": true,
       "brand": "Casio",
       "category": "Watches",
-      "imageUrl": "/products/watch.jpg"
+      "imageUrl": "/products/watch.jpg",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ]
     },
     {
       "id": 2,
@@ -147,10 +153,41 @@
       "rating": 4,
       "price": 42.00,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
-      "sale": true,
+      "longDescription": {
+        "title": "Varius tempor.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac quam dolor. In dignissim lectus sed nisl tempor, ac porttitor libero consectetur. Pellentesque diam dolor, tincidunt nec ante congue, tincidunt facilisis tortor. Mauris vitae massa molestie, sagittis ligula vel, egestas massa. Phasellus quis sodales augue. Donec nec ultricies diam. Integer feugiat odio ut dictum viverra. Donec vehicula nisi placerat cursus mollis. Nunc aliquam tempor justo, ut sagittis nisi. Mauris ullamcorper quis nisl sed dictum. Maecenas quam risus, congue quis accumsan at, imperdiet sed lectus. Aliquam in est purus."
+      },
+      "additionalInfo": "Consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo. Lorem ipsum dolor sit amet.",
+      "features": [
+        "High quality materials",
+        "Clean lines and geometric figure",
+        "Simple neutral colours.",
+        "Ergonomic design"
+      ],
+      "reviews": [
+        {
+          "username": "user 1",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo."
+        },
+        {
+          "username": "user 2",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo."
+        },
+        {
+          "username": "user 3",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo."
+        }
+      ],
+      "video": "video.com/url",
+      "sale": {"discount": 0.2},
       "brand": "Casio",
       "category": "Watches",
-      "imageUrl": "/products/watch.jpg"
+      "imageUrl": "/products/watch.jpg",
+      "images": [
+        "/products/ilias-gainutdinov-rr7n1WkX1f4-unsplash.jpg",
+        "/products/isaac-quesada-mtrnUVTNYA8-unsplash.jpg",
+        "/products/olga-nayda-dB3pkARCxHI-unsplash.jpg"
+      ]
     },
     {
       "id": 2,
