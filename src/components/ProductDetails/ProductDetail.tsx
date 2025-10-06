@@ -14,7 +14,7 @@ import { addCartItem } from "@/store/cart-actions";
 
 export default function ProductDetail({ product }: { product: ProductData }) {
   const dispatch = useAppDispatch();
-  const [selectedImage, setSelectedImage] = useState(product.images[0]);
+  const [selectedImage, setSelectedImage] = useState(product.imageUrl);
 
   const handleAddToCart = () => {
     dispatch(addCartItem(product));
