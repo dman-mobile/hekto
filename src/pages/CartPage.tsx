@@ -1,4 +1,5 @@
 import { CartContainer, EmptyCartImage } from "@/components/Cart/Cart.styles";
+import CartItemsList from "@/components/Cart/CartItemList";
 import { ButtonBig } from "@/components/ui/Button.styles";
 import { useAppSelector } from "@/store/hooks";
 import { Section } from "@/styled-components/Section.styles";
@@ -20,9 +21,7 @@ export default function CartPage() {
             </a>
           </>
         ) : (
-          // <CartItemsList />
-          <>
-          </>
+          <CartItemsList />
         )}
       </CartContainer>
     </Section>
