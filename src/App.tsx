@@ -4,7 +4,8 @@ import ProductsPage from './pages/ProductsPage';
 import RootLayout from './pages/RootLayout';
 import ErrorPage from './pages/ErrorPage';
 import ProductDetailPage from './pages/ProductDetailPage';
-import NotFoundPage from './pages/NotFoundPage'; 
+import NotFoundPage from './pages/NotFoundPage';
+import CartPage from './pages/CartPage';
 
 const router = createBrowserRouter([
   {
@@ -12,10 +13,11 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage /> }, 
+      { index: true, element: <HomePage /> },
       { path: 'products', element: <ProductsPage /> },
       { path: 'products/:productId', element: <ProductDetailPage /> },
-      { path: '*', element: <NotFoundPage /> } 
+      { path: 'cart', element: <CartPage /> },
+      { path: '*', element: <NotFoundPage /> }
     ],
   },
 ]);

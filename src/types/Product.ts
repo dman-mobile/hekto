@@ -14,7 +14,7 @@ export interface ProductData {
   features: Array<string>,
   additionalInfo: string,
   longDescription: { body: string, title: string },
-  images: Array<string>,
+  images?: Array<string>,
 }
 
 export type ProductCategory = 'new' | 'best' | 'featured' | 'offer' | 'headphones' | 'laptop' | 'other' | 'watch' | 'game-console' | 'clothing' | 'perfume';
