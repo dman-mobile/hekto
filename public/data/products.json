@@ -178,7 +178,7 @@
           "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo."
         }
       ],
-      "video": "video.com/url",
+      "video": "https://www.youtube.com/embed/xvFZjo5PgG0?si=hes2mGcpzeZ_zwne",
       "sale": {"discount": 0.2},
       "brand": "Casio",
       "category": "Watches",
