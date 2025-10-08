@@ -15,6 +15,8 @@ export interface ProductData {
   additionalInfo: string,
   longDescription: { body: string, title: string },
   images?: Array<string>,
+  video?: string,
+  reviews?: Array<{username: string, body: string}>
 }
 
 export type ProductCategory = 'new' | 'best' | 'featured' | 'offer' | 'headphones' | 'laptop' | 'other' | 'watch' | 'game-console' | 'clothing' | 'perfume';
