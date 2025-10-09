@@ -87,6 +87,7 @@ export const ItemActions = styled('div')({
   display: 'flex',
   alignItems: 'center',
   gap: '10px',
+  marginLeft: 16,
   padding: '5px',
   borderRadius: '4px',
   justifyContent: 'center',

@@ -14,3 +14,12 @@ export interface CartState {
   totalQuantity: number;
   changed: boolean;
 }
+
+export interface ConfirmationModalProps {
+  title: string;
+  message: string;
+  onClose: () => void;
+  onConfirm: () => void;
+  confirmText?: string;
+  confirmColor?: string;
+}
