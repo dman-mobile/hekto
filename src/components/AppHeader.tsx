@@ -9,6 +9,8 @@ import {
   NavContainer,
   NavLinks,
   NavWrapper,
+  CartLink,
+  CartBadge,
 } from "./AppHeader.styles";
 import { FlexCenter } from "../styled-components/Flex.styles";
 import Input from "./ui/Input";
@@ -19,8 +21,10 @@ import { CartIcon } from "../icons/Icons";
 import LanguageSelector from "./ui/LanguageSelector";
 import CurrencySelector from "./ui/CurrencySelector";
 import { Currency, Language } from "../types/Selector";
+import { useAppSelector } from "@/store/hooks";
 
 const AppHeader = () => {
+  const totalQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const navLinkStyles = ({ isActive }: NavLinkStyleProps) => {
     return {
       color: isActive ? 'var(--color-primary)' : 'inherit',
@@ -46,7 +50,7 @@ const AppHeader = () => {
           }} /> {/* Será implementado con Redux Toolkit mas adelante*/}
           <CurrencySelector value={Currency.USD} onChange={function (newValue: string): void {
             throw new Error("Function not implemented.");
-          } } /> {/* Será implementado con Redux Toolkit mas adelante*/}
+          }} /> {/* Será implementado con Redux Toolkit mas adelante*/}
           <MenuLink>
             Login
             <UserIcon />
@@ -55,9 +59,12 @@ const AppHeader = () => {
             Wishlist
             <ChevronDownIcon />
           </MenuLink>
-          <NavLink to={'/cart'}>
+          <CartLink to={'/cart'}>
             <CartIcon />
-          </NavLink>
+            {totalQuantity > 0 && (
+              <CartBadge>{totalQuantity}</CartBadge>
+            )}
+          </CartLink>
         </MenuContainer>
       </HeaderContainer>
       <NavWrapper>

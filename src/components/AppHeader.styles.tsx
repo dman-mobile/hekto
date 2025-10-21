@@ -1,4 +1,6 @@
+import { Badge } from "@mui/material";
 import { styled } from "@mui/system";
+import { NavLink } from "react-router-dom";
 
 export const HeaderWrapper = styled('header')({
   display: 'flex',
@@ -77,3 +79,27 @@ export const NavLinks = styled('ul')({
   marginLeft: 8
 })
 
+export const CartLink = styled(NavLink)({
+  position: 'relative',
+  display: 'flex',
+  alignItems: 'center',
+  padding: '5px',
+  color: 'var(--color-text)',
+});
+
+export const CartBadge = styled(Badge)({
+  borderRadius: '50%',
+  aspectRatio: '1/1',
+  width: 18,
+  height: 18,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  top: -6,
+  right: -6,
+  fontSize: 12,
+  fontWeight: 'bold',
+  position: 'absolute',
+  backgroundColor: 'var(--color-primary)',
+  fontFamily: 'var(--font-family-secondary)',
+});

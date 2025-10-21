@@ -1,14 +1,36 @@
-import { ProductData } from "@/types/Product"
-import { useState, useEffect, useRef } from "react"
-import { Card, CardActions, Price, PriceContainer, PriceDiscount, ProductCode, SkeletonCard } from "./Featured.styles.tsx"
+import { ProductData } from "@/types/Product";
+import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  Card,
+  CardActions,
+  Price,
+  PriceContainer,
+  PriceDiscount,
+  ProductCode,
+  SkeletonCard,
+} from "./Featured.styles.tsx";
 import { ImageWrapper } from "./Featured.styles.tsx";
-import { FeaturedSection, ProductsWrapper, CardBody, ProductTitle, CarouselTrack } from "./Featured.styles.tsx";
+import {
+  FeaturedSection,
+  ProductsWrapper,
+  CardBody,
+  ProductTitle,
+  CarouselTrack,
+} from "./Featured.styles.tsx";
 import { ButtonRound, ButtonSmall } from "./ui/Button.styles.tsx";
 import { CartIcon, HeartIcon, ZoomIcon } from "../icons/Icons.tsx";
-import { FETCH_DELAY, PRODUCTS_PER_PAGE_DESKTOP } from "../constants/constants.ts";
+import {
+  FETCH_DELAY,
+  PRODUCTS_PER_PAGE_DESKTOP,
+} from "../constants/constants.ts";
 import CarouselPills from "./ui/carousel/CarouselPills.tsx";
+import { useAppDispatch } from "@/store/hooks.ts";
+import { addCartItem } from "@/store/cart-actions.ts";
 
 export default function Featured() {
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const [products, setProducts] = useState<ProductData[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,22 +45,27 @@ export default function Featured() {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
+  const hasDragged = useRef(false);
+
   const GAP = 32;
 
   useEffect(() => {
-    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+    const delay = (ms: number) =>
+      new Promise((resolve) => setTimeout(resolve, ms));
 
     const getProducts = async () => {
       try {
         const [response] = await Promise.all([
-          fetch('/data/products.json'),
-          delay(FETCH_DELAY)
+          fetch("/data/products.json"),
+          delay(FETCH_DELAY),
         ]);
-        
+
         const data = await response.json();
         const featuredProducts = data.featured;
         setProducts(featuredProducts);
-        setPages(Math.ceil(featuredProducts.length / PRODUCTS_PER_PAGE_DESKTOP));
+        setPages(
+          Math.ceil(featuredProducts.length / PRODUCTS_PER_PAGE_DESKTOP)
+        );
       } catch (error) {
         console.error("Failed to fetch products:", error);
       } finally {
@@ -62,13 +89,21 @@ export default function Featured() {
     setStartPos(e.clientX);
     setIsDragging(true);
     setPrevTranslate(currentTranslate);
-    trackRef.current?.classList.add('grabbing');
+    trackRef.current?.classList.add("grabbing");
+
+    hasDragged.current = false;
   };
 
   const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!isDragging) return;
+
     const currentPosition = e.clientX;
     const difference = currentPosition - startPos;
+
+    if (Math.abs(difference) > 10) {
+      hasDragged.current = true;
+    }
+
     if (activeIndex === 0 && difference > 0) {
       return;
     }
@@ -82,7 +117,7 @@ export default function Featured() {
     if (!isDragging) return;
 
     setIsDragging(false);
-    trackRef.current?.classList.remove('grabbing');
+    trackRef.current?.classList.remove("grabbing");
 
     const movedBy = currentTranslate - prevTranslate;
     const pageWidth = containerRef.current?.offsetWidth || 0;
@@ -102,6 +137,12 @@ export default function Featured() {
     setActiveIndex(newIndex);
   };
 
+  const handleCardClick = (id: string) => {
+    if (hasDragged.current) {
+      return;
+    }
+    navigate(`/products/${id}`);
+  };
 
   return (
     <FeaturedSection>
@@ -111,43 +152,69 @@ export default function Featured() {
           ref={trackRef}
           style={{
             transform: `translateX(${currentTranslate}px)`,
-            cursor: isDragging ? 'grabbing' : 'grab'
+            cursor: isDragging ? "grabbing" : "grab",
           }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
           onPointerLeave={handlePointerUp}
         >
-          {loading && 
-          <>
-            <SkeletonCard />
-            <SkeletonCard />
-            <SkeletonCard />
-            <SkeletonCard />
-          </>}
-          {products && !loading && products.map((product, index) =>
-            <Card key={index} onDragStart={(e) => e.preventDefault()}>
-              <ImageWrapper>
-                <img src={product.imageUrl} alt={product.title} />
-                <ButtonSmall className={'button-details'}>View Details</ButtonSmall>
-                <CardActions>
-                  <ButtonRound> <CartIcon /> </ButtonRound>
-                  <ButtonRound> <HeartIcon /> </ButtonRound>
-                  <ButtonRound> <ZoomIcon /> </ButtonRound>
-                </CardActions>
-              </ImageWrapper>
-              <CardBody>
-                <ProductTitle>{product.title}</ProductTitle>
-                <ProductCode>Code - {product.code}</ProductCode>
-                {!product.sale && <Price>${product.price.toFixed(2)}</Price>}
-                {product.sale &&
-                  <PriceContainer>
-                    <p>${product.price.toFixed(2)}</p>
-                    <PriceDiscount>${(product.price + 15).toFixed(2)}</PriceDiscount>
-                  </PriceContainer>
-                }
-              </CardBody>
-            </Card>)}
+          {loading && (
+            <>
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
+            </>
+          )}
+          {products &&
+            !loading &&
+            products.map((product) => (
+              <Card
+                onClick={() => handleCardClick(String(product.id))}
+                key={product.id}
+                onDragStart={(e) => e.preventDefault()}
+              >
+                <ImageWrapper>
+                  <img src={product.imageUrl} alt={product.title} />
+                  <ButtonSmall className={"button-details"}>
+                    View Details
+                  </ButtonSmall>
+                  <CardActions>
+                    {/* 8. Stop propagation on inner buttons */}
+                    <ButtonRound
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        dispatch(addCartItem(product));
+                      }}
+                    >
+                      <CartIcon />
+                    </ButtonRound>
+                    <ButtonRound onClick={(e) => e.stopPropagation()}>
+                      <HeartIcon />
+                    </ButtonRound>
+                    <ButtonRound onClick={(e) => e.stopPropagation()}>
+                      <ZoomIcon />
+                    </ButtonRound>
+                  </CardActions>
+                </ImageWrapper>
+                <CardBody>
+                  <ProductTitle>{product.title}</ProductTitle>
+                  <ProductCode>Code - {product.code}</ProductCode>
+                  {!product.sale && (
+                    <Price>${product.price.toFixed(2)}</Price>
+                  )}
+                  {product.sale && (
+                    <PriceContainer>
+                      <p>${product.price.toFixed(2)}</p>
+                      <PriceDiscount>
+                        ${(product.price + 15).toFixed(2)}
+                      </PriceDiscount>
+                    </PriceContainer>
+                  )}
+                </CardBody>
+              </Card>
+            ))}
         </CarouselTrack>
       </ProductsWrapper>
       <CarouselPills
@@ -156,5 +223,5 @@ export default function Featured() {
         onDotClick={setActiveIndex}
       />
     </FeaturedSection>
-  )
+  );
 }

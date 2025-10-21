@@ -6,3 +6,10 @@ export interface ITab<T> {
 export interface TabProps {
   isActive?: boolean
 }
+
+export enum ProductDetailTab {
+  Description = 'description',
+  AdditionalInfo = 'additionalInfo',
+  Reviews = 'reviews',
+  Video = 'video',
+}

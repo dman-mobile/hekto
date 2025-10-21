@@ -16,7 +16,7 @@ export default function ProductsPage() {
 
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [sortBy, setSortBy] = useState('Price: High -> Low');
-  const [view, setView] = useState<'grid' | 'list'>('list'); // 'grid' or 'list'
+  const [view, setView] = useState<'grid' | 'list'>('list');
   const [currentPage, setCurrentPage] = useState(1);
 
   const [selectedFilters, setSelectedFilters] = useState<ISelectedFilters>(initialFilters);
@@ -66,7 +66,6 @@ export default function ProductsPage() {
     } else if (sortBy === 'Price: Low -> High') {
       sortedProducts.sort((a, b) => a.price - b.price);
     }
-    console.log(selectedFilters)
     return sortedProducts;
   }, [allProducts, selectedFilters, sortBy]);
 
@@ -103,12 +102,12 @@ export default function ProductsPage() {
 
   const handlePerPageChange = (newValue: number) => {
     setItemsPerPage(newValue);
-    setCurrentPage(1); // Reset to first page when items per page changes
+    setCurrentPage(1);
   };
 
   const handleSortByChange = (newValue: string) => {
     setSortBy(newValue);
-    setCurrentPage(1); // Reset to first page when sorting changes
+    setCurrentPage(1);
   };
 
   const handleViewChange = (newView: 'grid' | 'list') => {

@@ -7,6 +7,8 @@ import { ProductData, ProductCategory } from "@/types/Product";
 import { ITab } from "../types/Tabs";
 import SkeletonCard from "./LatestSkeletonCard";
 import { FETCH_DELAY } from "../constants/constants";
+import { useAppDispatch } from "@/store/hooks.ts";
+import { addCartItem } from "@/store/cart-actions.ts";
 
 const tabs: ITab<ProductCategory>[] = [
   { label: 'New Arrivals', category: 'new' },
@@ -16,6 +18,7 @@ const tabs: ITab<ProductCategory>[] = [
 ]
 
 export default function Latest() {
+  const dispatch = useAppDispatch();
   const [products, setProducts] = useState<ProductData[]>([]);
   const [activeTab, setActiveTab] = useState<ProductCategory>('new');
   const [loading, setLoading] = useState(true);
@@ -72,7 +75,7 @@ export default function Latest() {
             <ImageContainer>
               <Image src={product.imageUrl} alt={product.title} />
               <CardActions>
-                <ButtonRound>
+                <ButtonRound onClick={() => dispatch(addCartItem(product))}>
                   <CartIcon />
                 </ButtonRound>
                 <ButtonRound>
