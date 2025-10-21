@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import AppHeader from "../components/AppHeader";
@@ -27,8 +27,9 @@ export default function RootLayout() {
 
   return (
     <>
+      <ScrollRestoration />
       <AppHeader />
-      
+
       {notification && (
         <Notification
           status={notification.status}
@@ -36,7 +37,7 @@ export default function RootLayout() {
           message={notification.message}
         />
       )}
-      
+
       <main>
         <Outlet />
       </main>

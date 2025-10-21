@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 
 export const NotificationContainer = styled('div')({
-  position: "absolute",
+  position: "fixed",
   zIndex: 99,
   bottom: 10,
   right: 10,

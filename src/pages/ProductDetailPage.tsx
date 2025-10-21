@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ProductDetailSkeleton from "@/components/ProductDetails/ProductDetailSkeleton";
 import Related from "@/components/ProductDetails/Related";
 import ProductDescriptionTabs from "@/components/ProductDetails/ProductDescriptionTabs";
+import NotFoundPage from "./NotFoundPage";
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -42,7 +43,7 @@ export default function ProductDetailPage() {
   }
 
   if (!product) {
-    return <p>Product not found!</p>;
+    return <NotFoundPage />;
   }
 
   return (
